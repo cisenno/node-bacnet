@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fh1ch/node-bacstack.git"
+    "url": "git+https://github.com/adam-nielsen/node-bacstack.git"
   },
   "keywords": [
     "bacnet",
