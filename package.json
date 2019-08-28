@@ -1,6 +1,6 @@
 {
   "name": "@biancoroyal/bacstack",
-  "version": "0.0.1-beta.20",
+  "version": "0.0.1-beta.21",
   "description": "A BACnet protocol stack written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adam-nielsen/node-bacstack.git"
+    "url": "git+https://github.com/biancode/node-bacstack.git"
   },
   "keywords": [
     "bacnet",
@@ -26,7 +26,7 @@
     "email": "fabio@fh1.ch"
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 8.0.0"
   },
   "commitlint": {
     "extends": [

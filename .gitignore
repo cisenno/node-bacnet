@@ -3,3 +3,5 @@ npm-debug.log
 reports/
 docs/
 .nyc_output/
+
+coverage/
