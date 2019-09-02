@@ -1,6 +1,6 @@
 {
   "name": "@biancoroyal/bacstack",
-  "version": "0.0.1-beta.21",
+  "version": "0.0.1-beta.22",
   "description": "A BACnet protocol stack written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -54,4 +54,14 @@
     "mocha": "^6.2.0",
     "nyc": "^14.1.1"
   }
+},
+"files": [
+  "docs",
+  "examples",
+  "lib",
+  "index.js"
+],
+"directories": {
+  "example": "examples",
+  "test": "test"
 }
