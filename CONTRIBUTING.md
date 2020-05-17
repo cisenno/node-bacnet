@@ -79,7 +79,8 @@ as well.
 
 ### NVM
 
-Use NVM to manage Node.js versions and to test with different versions in development.
+Use [NVM](https://github.com/nvm-sh/nvm) to manage Node.js versions and to test with different versions in development.
+
 
 ``` sh
 nvm install lts
