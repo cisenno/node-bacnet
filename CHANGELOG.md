@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.0.1-beta.23](https://github.com/biancode/node-bacstack/compare/v0.0.1-beta.22...v0.0.1-beta.23) (2020-05-17)
+
+
+### Features
+
+* add cov notification methods ([a12bb30](https://github.com/biancode/node-bacstack/commit/a12bb3064ac8695486cc46ec3fcca852ed682c4e))
+
 <a name="0.0.1-beta.13"></a>
 # [0.0.1-beta.13](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.12...v0.0.1-beta.13) (2017-12-24)
 
@@ -228,5 +239,3 @@
 ### Bug Fixes
 
 * fix various syntax issues ([3259856](https://github.com/fh1ch/node-bacstack/commit/325985624e95caaa622efad486ac456554dacd96))
-
-

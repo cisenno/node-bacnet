@@ -1,6 +1,6 @@
 {
   "name": "@biancoroyal/bacstack",
-  "version": "0.0.1-beta.22",
+  "version": "0.0.1-beta.23",
   "description": "A BACnet protocol stack written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,10 @@
     "test": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-test mocha test/unit/*.spec.js",
     "integration": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-integration mocha test/integration/*.spec.js --timeout 5000",
     "compliance": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-compliance mocha test/compliance/*.spec.js --timeout 5000",
-    "docs": "jsdoc -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md"
+    "docs": "jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
+    "release": "standard-version -a",
+    "release:beta": "standard-version --prerelease beta",
+    "release:alpha": "standard-version --prerelease alpha"
   },
   "repository": {
     "type": "git",
@@ -19,12 +22,20 @@
     "bacnet",
     "bacstack",
     "building",
-    "automation"
+    "automation",
+    "iot"
   ],
   "author": {
     "name": "Fabio Huser",
     "email": "fabio@fh1.ch"
   },
+  "contributors": [
+    {
+      "name": "Klaus Landsdorf",
+      "email": "klaus.landsdorf@iniationware.com",
+      "url": "https://iniationware.com/"
+    }
+  ],
   "engines": {
     "node": ">= 8.0.0"
   },
@@ -52,7 +63,8 @@
     "jsdoc": "^3.6.3",
     "jshint": "^2.10.2",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "standard-version": "^8.0.0"
   },
   "files": [
     "docs",
