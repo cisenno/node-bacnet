@@ -76,3 +76,36 @@ npm run docs
 
 It is expected that new features or changes are reflected in the documentation
 as well.
+
+### NVM
+
+Use NVM to manage Node.js versions and to test with different versions in development.
+
+``` sh
+nvm install lts
+nvm use lts
+nvm current
+```
+
+### Clean Test
+
+``` sh
+./clean.sh
+```
+
+### Show Updates for dependencies
+
+``` sh
+./npm-update.sh
+```
+### Upgrade all dependencies
+
+Once
+``` sh
+npm i -g npm-check-updates
+```
+
+Upgrade
+``` sh
+./npm-upgrade.sh
+```
