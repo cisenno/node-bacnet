@@ -13,8 +13,9 @@
     "release": "standard-version -a",
     "release:beta": "standard-version --prerelease beta",
     "release:alpha": "standard-version --prerelease alpha",
-    "compose:build": "docker-compose build",
-    "compose:up": "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client"
+    "compose:build": "docker-compose build .",
+    "compose:up": "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client",
+    "docker": "npm run compose:build && npm run compose:up"
   },
   "repository": {
     "type": "git",

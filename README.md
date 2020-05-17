@@ -11,7 +11,7 @@ Add Node BACstack to your project by using:
 npm install --save bacstack
 ```
 
-The API documentation is available under **[fh1ch.github.io/node-bacstack](https://fh1ch.github.io/node-bacstack)**.
+The API documentation is available under **[GitHub Page of Docs](https://biancoroyal.github.io/node-bacstack/)**.
 
 ### Features
 
@@ -21,17 +21,17 @@ following services are already supported at this point in time:
 
 | Service                        | Execute                                                                                | Handle                                                                        |
 |--------------------------------|:--------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|
-| Who Is                         | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.whoIs)                      | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.event:whoIs)       |
-| I Am                           | yes¹                                                                                   | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.event:iAm)         |
+| Who Is                         | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.whoIs)                      | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.event:whoIs)       |
+| I Am                           | yes¹                                                                                   | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.event:iAm)         |
 | Who Has                        | yes¹                                                                                   | yes¹                                                                          |
 | I Have                         | yes¹                                                                                   | yes¹                                                                          |
-| Time Sync                      | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.timeSync)                   | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.event:timeSync)    |
-| UTC Time Sync                  | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.timeSyncUTC)                | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.event:timeSyncUTC) |
-| Read Property                  | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.readProperty)               | yes¹                                                                          |
-| Read Property Multiple         | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.readPropertyMultiple)       | yes¹                                                                          |
+| Time Sync                      | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.timeSync)                   | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.event:timeSync)    |
+| UTC Time Sync                  | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.timeSyncUTC)                | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.event:timeSyncUTC) |
+| Read Property                  | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.readProperty)               | yes¹                                                                          |
+| Read Property Multiple         | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.readPropertyMultiple)       | yes¹                                                                          |
 | Read Range                     | yes¹                                                                                   | yes¹                                                                          |
-| Write Property                 | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.writeProperty)              | yes¹                                                                          |
-| Write Property Multiple        | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.writePropertyMultiple)      | yes¹                                                                          |
+| Write Property                 | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.writeProperty)              | yes¹                                                                          |
+| Write Property Multiple        | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.writePropertyMultiple)      | yes¹                                                                          |
 | Add List Element               | yes¹                                                                                   | yes¹                                                                          |
 | Remove List Element            | yes¹                                                                                   | yes¹                                                                          |
 | Create Object                  | yes¹                                                                                   | yes¹                                                                          |
@@ -41,8 +41,8 @@ following services are already supported at this point in time:
 | Subscribe Property             | yes¹                                                                                   | yes¹                                                                          |
 | Atomic Read File               | yes¹                                                                                   | yes¹                                                                          |
 | Atomic Write File              | yes¹                                                                                   | yes¹                                                                          |
-| Reinitialize Device            | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.reinitializeDevice)         | yes¹                                                                          |
-| Device Communication Control   | [yes](https://fh1ch.github.io/node-bacstack/bacstack.html#.deviceCommunicationControl) | yes¹                                                                          |
+| Reinitialize Device            | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.reinitializeDevice)         | yes¹                                                                          |
+| Device Communication Control   | [yes](https://biancoroyal.github.io/node-bacstack/bacstack.html#.deviceCommunicationControl) | yes¹                                                                          |
 | Get Alarm Summary              | yes¹                                                                                   | yes¹                                                                          |
 | Get Event Information          | yes¹                                                                                   | yes¹                                                                          |
 | Get Enrollment Summary         | yes¹                                                                                   | yes¹                                                                          |
