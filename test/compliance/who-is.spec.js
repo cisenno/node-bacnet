@@ -33,10 +33,10 @@ describe('bacstack - whoIs compliance', () => {
   it('should find the device simulator', (next) => {
     bacnetClient.on('iAm', (device) => {
       console.log(device.payload.deviceId);
-      expect(device.payload.deviceId).to.eql(12345);
-      expect(device.payload.maxApdu).to.eql(1464);
-      expect(device.payload.segmentation).to.eql(utils.bacnetClient.enum.Segmentation.SEGMENTED_BOTH);
-      expect(device.payload.vendorId).to.eql(61440);
+      expect(device.payload.deviceId).to.eql(1234);
+      expect(device.payload.maxApdu).to.eql(1476);
+      expect(device.payload.segmentation).to.eql(utils.bacnetClient.enum.Segmentation.NO_SEGMENTATION);
+      expect(device.payload.vendorId).to.eql(260);
       next();
     });
     bacnetClient.whoIs();
@@ -46,7 +46,7 @@ describe('bacstack - whoIs compliance', () => {
   it('should find the device simulator with provided min device ID', (next) => {
     bacnetClient.on('iAm', (device) => {
       console.log(device.payload.deviceId);
-      expect(device.payload.deviceId).to.eql(12345);
+      expect(device.payload.deviceId).to.eql(1234);
       next();
     });
     bacnetClient.whoIs(1233);
@@ -56,7 +56,7 @@ describe('bacstack - whoIs compliance', () => {
   it('should find the device simulator with provided min/max device ID and IP', (next) => {
     bacnetClient.on('iAm', (device) => {
       console.log(device.payload.deviceId);
-      expect(device.payload.deviceId).to.eql(12345);
+      expect(device.payload.deviceId).to.eql(1234);
       next();
     });
     bacnetClient.whoIs(1233, 1235, 'bacnet-device');
