@@ -4,5 +4,10 @@
   "requireSemicolons": true,
   "requireCurlyBraces": false,
   "requireCapitalizedConstructors": false,
-  "jsDoc": false
+  "jsDoc": false,
+  "excludeFiles": [
+    "test/**",
+    "node_modules/**",
+    "docs/**"
+  ]
 }
