@@ -12,7 +12,9 @@
     "docs": "jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
     "release": "standard-version -a",
     "release:beta": "standard-version --prerelease beta",
-    "release:alpha": "standard-version --prerelease alpha"
+    "release:alpha": "standard-version --prerelease alpha",
+    "compose:build": "docker-compose build",
+    "compose:up": "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client"
   },
   "repository": {
     "type": "git",
