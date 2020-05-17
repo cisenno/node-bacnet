@@ -9,7 +9,7 @@ describe('bacstack - whoIs compliance', () => {
   let bacnetClient;
 
   beforeEach((done) => {
-    bacnetClient = new utils.bacnetClient({ apduTimeout: 1000, interface: '0.0.0.0' });
+    bacnetClient = new utils.bacnetClient({apduTimeout: 1000, interface: '0.0.0.0'});
     console.log('open transport ' + Date.now());
     bacnetClient.on('message', (msg, rinfo) => {
       console.log(msg);

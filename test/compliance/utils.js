@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports.bacnetClient = require('../../');;
+module.exports.bacnetClient = require('../../');
