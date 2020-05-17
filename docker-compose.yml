@@ -1,7 +1,7 @@
 version: '3'
 services:
   bacnet-device:
-    image: fh1ch/bacstack-compliance-docker
+    image: biancoroyal/bacstack-compliance-docker
   bacnet-client:
     build:
       context: .
