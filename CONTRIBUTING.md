@@ -7,6 +7,10 @@ issues and adding new features.
 Please follow the best-practice contribution guidelines as mentioned below when
 submitting any changes.
 
+### Git
+
+Please, do you changes with teh develop branch and send your pull request to develop, too!
+
 ### Start
 
 ``` sh
