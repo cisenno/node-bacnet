@@ -16,7 +16,7 @@ The API documentation is available under **[GitHub Page of Docs](https://biancor
 ### Features
 
 The BACnet® standard defines a wide variety of services as part of the
-specification. While Node BACstack tries to be as complete as possible,
+specification. While node-bacnet tries to be as complete as possible,
 following services are already supported at this point in time:
 
 | Service                        | Execute                                                                                | Handle                                                                        |
@@ -72,6 +72,7 @@ changes. Ask the active NPM publishers if you need some advice to start your con
 [The MIT License](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2018-2020 Community Driven
+
 Copyright (c) 2017-2019 Fabio Huser
 
 **Note:** This is not an official product of the BACnet Advocacy Group.
