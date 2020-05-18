@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer LifeSafetyOperation unit', () => {
+describe('bacnet - Services layer LifeSafetyOperation unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.lifeSafetyOperation.encode(buffer, 8, 'User01', 7, {type: 0, instance: 77});

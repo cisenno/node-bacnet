@@ -3,7 +3,7 @@
 const expect      = require('chai').expect;
 const utils       = require('./utils');
 
-describe('bacstack - readPropertyMultiple integration', () => {
+describe('bacnet - readPropertyMultiple integration', () => {
   it('should return a timeout error if no device is available', (next) => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     const requestArray = [

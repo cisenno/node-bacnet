@@ -5,7 +5,7 @@ const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 const baEnum      = require('../../lib/enum');
 
-describe('bacstack - Services layer ReadProperty unit', () => {
+describe('bacnet - Services layer ReadProperty unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.readProperty.encode(buffer, 4, 630, 85, 0xFFFFFFFF);

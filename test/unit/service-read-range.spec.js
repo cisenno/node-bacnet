@@ -5,7 +5,7 @@ const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 const baEnum      = require('../../lib/enum');
 
-describe('bacstack - Services layer ReadRange unit', () => {
+describe('bacnet - Services layer ReadRange unit', () => {
   it('should successfully encode and decode by position', () => {
     const buffer = utils.getBuffer();
     baServices.readRange.encode(buffer, {type: 61, instance: 35}, 85, 0xFFFFFFFF, baEnum.ReadRangeType.BY_POSITION, 10, null, 0);

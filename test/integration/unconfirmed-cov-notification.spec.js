@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 const utils = require('./utils');
 const baEnum = require('../../lib/enum');
 
-describe('bacstack - unconfirmedCOVNotification integration', () => {
+describe('bacnet - unconfirmedCOVNotification integration', () => {
   it('should correctly send a telegram', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.unconfirmedCOVNotification(

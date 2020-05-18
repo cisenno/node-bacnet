@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer DeleteObject unit', () => {
+describe('bacnet - Services layer DeleteObject unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.deleteObject.encode(buffer, {type: 1, instance: 10});

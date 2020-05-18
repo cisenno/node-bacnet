@@ -5,7 +5,7 @@ const utils = require('./utils');
 
 // you need to run the Weather2 Station of the YABE BACnet package
 // https://sourceforge.net/projects/yetanotherbacnetexplorer/
-describe('bacstack - whoIs compliance', () => {
+describe('bacnet - whoIs compliance', () => {
   let bacnetClient;
 
   beforeEach((done) => {

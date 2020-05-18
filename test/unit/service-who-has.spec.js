@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer WhoHas unit', () => {
+describe('bacnet - Services layer WhoHas unit', () => {
   it('should successfully encode and decode by id', () => {
     const buffer = utils.getBuffer();
     baServices.whoHas.encode(buffer, 3, 4000, {type: 3, instance: 15});

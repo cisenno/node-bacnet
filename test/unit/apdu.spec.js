@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baApdu      = require('../../lib/apdu');
 
-describe('bacstack - APDU layer', () => {
+describe('bacnet - APDU layer', () => {
   describe('decodedType', () => {
     it('should correctly encode and decode a package', () => {
       const value = [0, 128, 4, 5];

@@ -3,7 +3,7 @@
 const expect      = require('chai').expect;
 const utils       = require('./utils');
 
-describe('bacstack - unconfirmedEventNotification integration', () => {
+describe('bacnet - unconfirmedEventNotification integration', () => {
   it('should correctly send a telegram', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     const date = new Date();

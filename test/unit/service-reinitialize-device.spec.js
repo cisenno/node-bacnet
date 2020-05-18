@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer ReinitializeDevice unit', () => {
+describe('bacnet - Services layer ReinitializeDevice unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.reinitializeDevice.encode(buffer, 5);

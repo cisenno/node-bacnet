@@ -5,7 +5,7 @@ const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 const baEnum      = require('../../lib/enum');
 
-describe('bacstack - Services layer GetEventInformation unit', () => {
+describe('bacnet - Services layer GetEventInformation unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.getEventInformation.encode(buffer, {type: 8, instance: 15});

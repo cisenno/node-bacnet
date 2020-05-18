@@ -1,6 +1,6 @@
 {
-  "name": "@biancoroyal/bacstack",
-  "version": "0.0.1-beta.23",
+  "name": "node-bacnet",
+  "version": "0.1.1-beta.1",
   "description": "A BACnet protocol stack written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "keywords": [
     "bacnet",
-    "bacstack",
+    "fieldbus",
     "building",
     "automation",
     "iot"
@@ -35,8 +35,11 @@
   "contributors": [
     {
       "name": "Klaus Landsdorf",
-      "email": "klaus.landsdorf@iniationware.com",
-      "url": "https://iniationware.com/"
+      "email": "klaus@iniationware.com"
+    },
+    {
+      "name": "Ingo Fischer",
+      "email": "iobroker@fischer-ka.de"
     }
   ],
   "engines": {

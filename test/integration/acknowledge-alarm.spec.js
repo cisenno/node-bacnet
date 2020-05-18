@@ -3,7 +3,7 @@
 const expect = require('chai').expect;
 const utils = require('./utils');
 
-describe('bacstack - acknowledgeAlarm integration', () => {
+describe('bacnet - acknowledgeAlarm integration', () => {
   it('should return a timeout error if no device is available', (next) => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.acknowledgeAlarm('127.0.0.1', {type: 2, instance: 3}, 2, 'Alarm Acknowledge Test',

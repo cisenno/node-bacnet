@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer GetEnrollmentSummary unit', () => {
+describe('bacnet - Services layer GetEnrollmentSummary unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     baServices.getEnrollmentSummary.encode(buffer, 2);

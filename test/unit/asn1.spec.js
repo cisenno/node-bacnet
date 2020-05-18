@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baAsn1      = require('../../lib/asn1');
 
-describe('bacstack - ASN1 layer', () => {
+describe('bacnet - ASN1 layer', () => {
   describe('decodeUnsigned', () => {
     it('should successfully decode 8-bit unsigned integer', () => {
       const result = baAsn1.decodeUnsigned(Buffer.from([0x00, 0xFF, 0xFF, 0xFF, 0xFF]), 1, 1);

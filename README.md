@@ -1,21 +1,21 @@
-# Node BACstack
+# node-bacnet
 
-A BACnet protocol stack written in pure JavaScript. BACnet is a protocol to
-interact with building automation devices defined by ASHRAE.
+A BACnet® protocol stack written in pure JavaScript.
+BACnet® is a protocol to interact with building automation devices defined by ASHRAE.
 
 ## Usage
 
-Add Node BACstack to your project by using:
+Add node-bacnet to your project by using:
 
 ``` sh
-npm install --save bacstack
+npm install --save node-bacnet
 ```
 
 The API documentation is available under **[GitHub Page of Docs](https://biancoroyal.github.io/node-bacstack/)**.
 
 ### Features
 
-The BACNET standard defines a wide variety of services as part of it's
+The BACnet® standard defines a wide variety of services as part of the
 specification. While Node BACstack tries to be as complete as possible,
 following services are already supported at this point in time:
 
@@ -56,49 +56,24 @@ following services are already supported at this point in time:
 
 ¹ Support implemented as Beta (untested, undocumented, breaking interface)
 
-### Example
-
-``` js
-const bacnet = require('bacstack');
-
-// Initialize BACStack
-const client = new bacnet({apduTimeout: 6000});
-
-// Discover Devices
-client.on('iAm', (device) => {
-  console.log('address: ', device.address);
-  console.log('deviceId: ', device.deviceId);
-  console.log('maxApdu: ', device.maxApdu);
-  console.log('segmentation: ', device.segmentation);
-  console.log('vendorId: ', device.vendorId);
-});
-client.whoIs();
-
-// Read Device Object
-const requestArray = [{
-  objectId: {type: 8, instance: 4194303},
-  properties: [{id: 8}]
-}];
-client.readPropertyMultiple('192.168.1.43', requestArray, (err, value) => {
-  console.log('value: ', value);
-});
-```
-
 ## Contributing
 
+This package is based on the work of Fabio Huser and is now community driven.
+The group is searching for active collaborators to finish that library to become a good piece of Open Source.
 Implementing and maintaining a protocol stack is a lot of work, therefore any
 help is appreciated, from creating issues, to contributing documentation, fixing
-issues and adding new features.
+issues, sending pull requests and adding new features.
 
 Please follow the [Contribution Guide](CONTRIBUTING.md) when submitting any
-changes.
+changes. Ask the active NPM publishers if you need some advice to start your contribution!
 
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2017-2019 Fabio Huser <fabio@fh1.ch>
+Copyright (c) 2018-2020 Community Driven
+Copyright (c) 2017-2019 Fabio Huser
 
-**Note:** This is not an official product of the BACnet Advocacy Group. BACnet®
-is a registered trademark of American Society of Heating, Refrigerating and
+**Note:** This is not an official product of the BACnet Advocacy Group.
+BACnet® is a registered trademark of American Society of Heating, Refrigerating and
 Air-Conditioning Engineers (ASHRAE).

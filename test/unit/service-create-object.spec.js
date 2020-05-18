@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer CreateObject unit', () => {
+describe('bacnet - Services layer CreateObject unit', () => {
   it('should successfully encode and decode', () => {
     const buffer = utils.getBuffer();
     const date = new Date(1, 1, 1);

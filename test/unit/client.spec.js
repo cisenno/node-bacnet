@@ -5,7 +5,7 @@ const utils       = require('./utils');
 const baEnum      = require('../../lib/enum');
 const client      = require('../../lib/client');
 
-describe('bacstack - client', () => {
+describe('bacnet - client', () => {
   it('should successfuly encode a bitstring > 32 bits', () => {
     const result = client.createBitstring([
       baEnum.ServicesSupported.CONFIRMED_COV_NOTIFICATION,

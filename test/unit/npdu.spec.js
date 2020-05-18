@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baNpdu      = require('../../lib/npdu');
 
-describe('bacstack - NPDU layer', () => {
+describe('bacnet - NPDU layer', () => {
   it('should successfully decode the NPDU function', () => {
     const result = baNpdu.decodeFunction([0, 1, 12], 1);
     expect(result).to.equal(12);

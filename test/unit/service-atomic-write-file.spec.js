@@ -4,7 +4,7 @@ const expect      = require('chai').expect;
 const utils       = require('./utils');
 const baServices  = require('../../lib/services');
 
-describe('bacstack - Services layer AtomicWriteFile unit', () => {
+describe('bacnet - Services layer AtomicWriteFile unit', () => {
   it('should successfully encode and decode as stream', () => {
     const buffer = utils.getBuffer();
     baServices.atomicWriteFile.encode(buffer, true, {type: 12, instance: 51}, 5, [[12, 12]]);

@@ -7,6 +7,12 @@ issues and adding new features.
 Please follow the best-practice contribution guidelines as mentioned below when
 submitting any changes.
 
+### Start
+
+``` sh
+npm install
+```
+
 ### Conventional Changelog
 
 This module has a changelog which is automatically generated based on Git commit
