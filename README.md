@@ -1,6 +1,16 @@
+![Platform Node](http://b.repl.ca/v1/Platform-Node-green.png)
+![Contrib BACnet®](http://b.repl.ca/v1/Contrib-BACnet®-green.png)
+![NodeJS_Version](http://b.repl.ca/v1/NodeJS-LTS-green.png)
+[![NPM download](https://img.shields.io/npm/dm/node-bacnet.svg)](http://www.npm-stats.com/~packages/node-bacnet)
+[![Build Status](https://travis-ci.org/BiancoRoyal/node-bacstack.svg?branch=master)](https://travis-ci.org/BiancoRoyal/node-bacstack)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/BiancoRoyal/node-bacstack)
+
 # node-bacnet
 
-A BACnet® protocol stack written in pure JavaScript.
+[![nodemodbus64](images/bacnet-icon-quad64.png)](https://www.npmjs.com/~package/node-bancet)
+
+The BACnet® protocol library written in pure JavaScript.
+
 BACnet® is a protocol to interact with building automation devices defined by ASHRAE.
 
 ## Usage
