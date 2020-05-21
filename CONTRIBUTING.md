@@ -14,6 +14,7 @@ and send us your pull request from your own forked repo feature-branches
 or fix-branches to the develop branch of our repo!
 
 see [Git-Flow](https://www.atlassian.com/de/git/tutorials/comparing-workflows/gitflow-workflow)
+
 Git-Flow feature brachnes would be great here to seperate and to review changes to get the best integration results for your good work.
 
 ### Start
