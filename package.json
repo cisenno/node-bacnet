@@ -1,7 +1,7 @@
 {
   "name": "node-bacnet",
-  "version": "0.1.1-beta.1",
-  "description": "A BACnet protocol stack written in pure JavaScript.",
+  "version": "0.1.2-beta.1",
+  "description": "The BACnet protocol library written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
     "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
@@ -43,7 +43,7 @@
     }
   ],
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10"
   },
   "commitlint": {
     "extends": [
