@@ -8,7 +8,7 @@ describe('bacnet - confirmedCOVNotification integration', () => {
   it('should return a timeout error if no device is available', (next) => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.confirmedCOVNotification(
-        '127.0.0.1', 3, 433, {type: 2, instance: 122}, 120,
+        '127.0.0.2', 3, 433, {type: 2, instance: 122}, 120,
         [
           {
             property: {id: 85},

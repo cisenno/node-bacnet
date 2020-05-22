@@ -11,7 +11,7 @@ describe('bacnet - writePropertyMultiple integration', () => {
         {property: {id: 28, index: 12}, value: [{type: 1, value: true}], priority: 8}
       ]}
     ];
-    client.writePropertyMultiple('127.0.0.1', values, (err, value) => {
+    client.writePropertyMultiple('127.0.0.2', values, (err, value) => {
       expect(err.message).to.eql('ERR_TIMEOUT');
       expect(value).to.eql(undefined);
       client.close();

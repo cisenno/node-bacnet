@@ -8,7 +8,7 @@ describe('bacnet - confirmedEventNotification integration', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     const date = new Date();
     date.setMilliseconds(880);
-    client.confirmedEventNotification('127.0.0.1', {
+    client.confirmedEventNotification('127.0.0.2', {
       processId: 3,
       initiatingObjectId: {},
       eventObjectId: {},

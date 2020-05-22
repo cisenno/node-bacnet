@@ -8,7 +8,7 @@ describe('bacnet - whoIs integration', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.on('iAm', (receiver, deviceId, maxApdu, segmentation, vendorId) => {
       client.close();
-      next(new Error('Unallowed Callback'));
+      next(new Error('Unallowed Callback from receiver: ' + receiver.payload + ' deviceId:' + deviceId));
     });
     setTimeout(() => {
       client.close();
