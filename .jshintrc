@@ -43,7 +43,7 @@
     "browser": true,
     "node": true,
 
-    "esversion": 6,
+    "esversion": 8,
 
     "globals": {
         "describe": false,
