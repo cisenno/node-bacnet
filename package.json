@@ -6,9 +6,9 @@
   "scripts": {
     "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
     "lint": "jshint lib/ test/ index.js && jscs lib/ test/ index.js",
-    "test": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-test mocha test/unit/*.spec.js",
-    "integration": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-integration mocha test/integration/*.spec.js --timeout 5000",
-    "compliance": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-compliance mocha test/compliance/*.spec.js --timeout 5000",
+    "test": "DEBUG=bacnet* nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-test mocha test/unit/*.spec.js",
+    "integration": "DEBUG=bacnet* nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-integration mocha test/integration/*.spec.js --timeout 5000",
+    "compliance": "DEBUG=bacnet* nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-compliance mocha test/compliance/*.spec.js --timeout 5000",
     "docs": "jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
     "release": "standard-version -a",
     "release:beta": "standard-version --prerelease beta",
