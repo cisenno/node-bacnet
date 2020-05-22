@@ -1,241 +1,362 @@
-# Changelog
+## <small>0.1.1-beta.1 (2020-05-18)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore: docker compliance tests via docker from biancoroyal image ([3fa63ce](https://github.com/BiancoRoyal/node-bacstack/commit/3fa63ce))
+* chore: docker compose calls via npm ([107d29b](https://github.com/BiancoRoyal/node-bacstack/commit/107d29b))
+* chore: docker compose update travis ([88dca0f](https://github.com/BiancoRoyal/node-bacstack/commit/88dca0f))
+* chore: hint for using develop branch instead of master ([ca3cc4d](https://github.com/BiancoRoyal/node-bacstack/commit/ca3cc4d))
+* chore: no yarn ([94bff0c](https://github.com/BiancoRoyal/node-bacstack/commit/94bff0c))
+* chore: nvm link for contribution ([44ac65a](https://github.com/BiancoRoyal/node-bacstack/commit/44ac65a))
+* chore: set all for new package name release node-bacnet ([e5bf557](https://github.com/BiancoRoyal/node-bacstack/commit/e5bf557))
+* chore: travis build lts ([4c34907](https://github.com/BiancoRoyal/node-bacstack/commit/4c34907))
+* test: docker compliance ([9b6ced4](https://github.com/BiancoRoyal/node-bacstack/commit/9b6ced4))
+* fix: docker compose build ([11e7602](https://github.com/BiancoRoyal/node-bacstack/commit/11e7602))
+* refactor: clean code from copy and paste errors, but there is more ([0eda794](https://github.com/BiancoRoyal/node-bacstack/commit/0eda794))
+* docs: new site to actual docs because of the dead main repo ([e212ae9](https://github.com/BiancoRoyal/node-bacstack/commit/e212ae9))
 
-### [0.0.1-beta.23](https://github.com/biancode/node-bacstack/compare/v0.0.1-beta.22...v0.0.1-beta.23) (2020-05-17)
 
 
-### Features
+## <small>0.0.1-beta.23 (2020-05-17)</small>
 
-* add cov notification methods ([a12bb30](https://github.com/biancode/node-bacstack/commit/a12bb3064ac8695486cc46ec3fcca852ed682c4e))
+* chore: development info ([2d0379f](https://github.com/BiancoRoyal/node-bacstack/commit/2d0379f))
+* chore: more development scripts to automate work ([4d0c741](https://github.com/BiancoRoyal/node-bacstack/commit/4d0c741))
+* chore(deps): bump handlebars from 4.1.0 to 4.5.3 ([3d42278](https://github.com/BiancoRoyal/node-bacstack/commit/3d42278))
+* chore(release): 0.0.1-beta.23 ([01cbbdd](https://github.com/BiancoRoyal/node-bacstack/commit/01cbbdd))
+* feat: add cov notification methods ([a12bb30](https://github.com/BiancoRoyal/node-bacstack/commit/a12bb30))
 
-<a name="0.0.1-beta.13"></a>
-# [0.0.1-beta.13](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.12...v0.0.1-beta.13) (2017-12-24)
 
-### Features
 
-* **bacnet-client:** implement alarming and eventing ([fbf120c](https://github.com/fh1ch/node-bacstack/commit/fbf120c0cc11861b994f51a7fa06e2160d58b1c5))
+## <small>0.0.1-beta.22 (2019-09-02)</small>
 
-### Bug Fixes
+* fix: package settings for a cleaner deploy ([0979b27](https://github.com/BiancoRoyal/node-bacstack/commit/0979b27))
+* fix: whois compliance test with weather server ([413698f](https://github.com/BiancoRoyal/node-bacstack/commit/413698f))
+* fix(apdu): rename wrongly named `adpu` modules and files to `apdu` ([f4ab0e3](https://github.com/BiancoRoyal/node-bacstack/commit/f4ab0e3))
+* fix(asn1): correct encoding of object-types > 512 ([3103ad5](https://github.com/BiancoRoyal/node-bacstack/commit/3103ad5)), closes [#122](https://github.com/BiancoRoyal/node-bacstack/issues/122)
+* fix(asn1): correct error object structure ([e3647da](https://github.com/BiancoRoyal/node-bacstack/commit/e3647da))
+* fix(client): Address PR feedback ([9561259](https://github.com/BiancoRoyal/node-bacstack/commit/9561259))
+* fix(client): correct deviceCommunicationControl example ([955211b](https://github.com/BiancoRoyal/node-bacstack/commit/955211b))
+* fix(client): Default to a hop count of 255 rather than 0 ([f1133b6](https://github.com/BiancoRoyal/node-bacstack/commit/f1133b6))
+* fix(client): Make confirmedCOV function use sendBvlc ([00557be](https://github.com/BiancoRoyal/node-bacstack/commit/00557be))
+* fix(client): Respond to message errors as unicast not broadcast ([e439f54](https://github.com/BiancoRoyal/node-bacstack/commit/e439f54))
+* fix(service): correct atomicWriteFile service functionality ([8a28088](https://github.com/BiancoRoyal/node-bacstack/commit/8a28088))
+* fix(services): correct readRangeAcknowledge implementation ([52c6d02](https://github.com/BiancoRoyal/node-bacstack/commit/52c6d02))
+* fix(tests): Update property name ([b125eae](https://github.com/BiancoRoyal/node-bacstack/commit/b125eae))
+* fix(transport): Correctly handle messages from non-standard BACnet port numbers ([7b6c618](https://github.com/BiancoRoyal/node-bacstack/commit/7b6c618))
+* chore: bump copyright year to 2018 ([46369c4](https://github.com/BiancoRoyal/node-bacstack/commit/46369c4))
+* chore: clean up package deploy ([a95c1b0](https://github.com/BiancoRoyal/node-bacstack/commit/a95c1b0))
+* chore: document client.errorResponse ([c8f47f0](https://github.com/BiancoRoyal/node-bacstack/commit/c8f47f0))
+* chore: pull request changes ([488c7d5](https://github.com/BiancoRoyal/node-bacstack/commit/488c7d5))
+* chore: README update ([7e7c682](https://github.com/BiancoRoyal/node-bacstack/commit/7e7c682))
+* chore: update libs ([54071e0](https://github.com/BiancoRoyal/node-bacstack/commit/54071e0))
+* chore(github): add GitHub PR and issue templates ([7879d94](https://github.com/BiancoRoyal/node-bacstack/commit/7879d94))
+* chore(license): align copyright claim with readme ([b3ec4a3](https://github.com/BiancoRoyal/node-bacstack/commit/b3ec4a3))
+* chore(npm): bump all dependencies to latest version ([5983acf](https://github.com/BiancoRoyal/node-bacstack/commit/5983acf))
+* chore(npm): bump all dependencies to latest version ([3931831](https://github.com/BiancoRoyal/node-bacstack/commit/3931831))
+* chore(npm): bump all NPM dependencies to latest version ([9b5cfaf](https://github.com/BiancoRoyal/node-bacstack/commit/9b5cfaf))
+* chore(nyc): switch from istanbul to nyc for coverage reporting ([d4af9ad](https://github.com/BiancoRoyal/node-bacstack/commit/d4af9ad)), closes [#129](https://github.com/BiancoRoyal/node-bacstack/issues/129)
+* chore(tarvis): split-up build and deployment stages ([10ac688](https://github.com/BiancoRoyal/node-bacstack/commit/10ac688))
+* chore(travis): only deploy pages on tag builds ([2d0c368](https://github.com/BiancoRoyal/node-bacstack/commit/2d0c368))
+* test: fixing integration tests ([46593e2](https://github.com/BiancoRoyal/node-bacstack/commit/46593e2))
+* test: start fixing compliance test whoIs ([7f3eb0c](https://github.com/BiancoRoyal/node-bacstack/commit/7f3eb0c))
+* test(compliance): add Docker test setup using C++ bacnet-stack ([8161410](https://github.com/BiancoRoyal/node-bacstack/commit/8161410))
+* test(services): implement readPropertyMultiple error test case ([088d176](https://github.com/BiancoRoyal/node-bacstack/commit/088d176))
+* ** Update URL to point at fork ([0a82263](https://github.com/BiancoRoyal/node-bacstack/commit/0a82263))
+* Adding sub device addressing for read/write/whois. Segmentation still not supported. ([0bd0803](https://github.com/BiancoRoyal/node-bacstack/commit/0bd0803))
+* fix for writeProperty fail ([29e0e09](https://github.com/BiancoRoyal/node-bacstack/commit/29e0e09))
+* Fixing https://github.com/fh1ch/node-bacstack/issues/122 ([4647891](https://github.com/BiancoRoyal/node-bacstack/commit/4647891))
+* Fixing unicast vs broadcast ([d66e56e](https://github.com/BiancoRoyal/node-bacstack/commit/d66e56e))
+* new version to publish on npm ([5880e3b](https://github.com/BiancoRoyal/node-bacstack/commit/5880e3b))
+* Update for sadr ([643b1ea](https://github.com/BiancoRoyal/node-bacstack/commit/643b1ea))
+* Update for snet in whois ([bb64e63](https://github.com/BiancoRoyal/node-bacstack/commit/bb64e63))
+* Update to force multicast on whois ([568d83e](https://github.com/BiancoRoyal/node-bacstack/commit/568d83e))
+* Updating for personal package release ([89e57b0](https://github.com/BiancoRoyal/node-bacstack/commit/89e57b0))
+* Updating for symmetry ([92f0660](https://github.com/BiancoRoyal/node-bacstack/commit/92f0660))
+* Updating package name ([df11d36](https://github.com/BiancoRoyal/node-bacstack/commit/df11d36))
+* Updating package version ([ef831e1](https://github.com/BiancoRoyal/node-bacstack/commit/ef831e1))
+* Version 20 ([320a81c](https://github.com/BiancoRoyal/node-bacstack/commit/320a81c))
+* refactor: eliminate PDU_TYPE prefix in PDU_TYPES ([657ea2e](https://github.com/BiancoRoyal/node-bacstack/commit/657ea2e))
+* refactor: rework whole project to utilize ES6 ([9415810](https://github.com/BiancoRoyal/node-bacstack/commit/9415810))
+* refactor: separate flags from PduTypes enumeration ([3aef94f](https://github.com/BiancoRoyal/node-bacstack/commit/3aef94f))
+* refactor(asn1): drop unused support functions ([3e549d2](https://github.com/BiancoRoyal/node-bacstack/commit/3e549d2))
+* refactor(client): Add/edit some messages to assist with debugging ([b2048f3](https://github.com/BiancoRoyal/node-bacstack/commit/b2048f3))
+* refactor(client): Remove 'broadcast' from naming of iAm and iHave functions ([e5a6163](https://github.com/BiancoRoyal/node-bacstack/commit/e5a6163))
+* refactor(enum): align enum with ASHRE 135-2016 standard ([abdbc8f](https://github.com/BiancoRoyal/node-bacstack/commit/abdbc8f))
+* refactor(npdu): reduce duplicate src/dest en/decodings ([20e3dd4](https://github.com/BiancoRoyal/node-bacstack/commit/20e3dd4))
+* refactor(services): restructure service function setup ([f28952a](https://github.com/BiancoRoyal/node-bacstack/commit/f28952a))
+* refactor(services): split-up services into individual files ([707d464](https://github.com/BiancoRoyal/node-bacstack/commit/707d464))
+* refactor(unit): drop `bacnet-` unit-test prefix ([b539802](https://github.com/BiancoRoyal/node-bacstack/commit/b539802))
+* refactor(unit): split service unit test into individual files ([b568b38](https://github.com/BiancoRoyal/node-bacstack/commit/b568b38))
+* feat(client): add confirmedCOVNotification() for pushing changes to subscribers ([11259b4](https://github.com/BiancoRoyal/node-bacstack/commit/11259b4))
+* feat(client): Add helper function for constructing a bit string ([3b60b36](https://github.com/BiancoRoyal/node-bacstack/commit/3b60b36))
+* feat(client): add support for interfacing with, and acting as, a BBMD device ([4e0288c](https://github.com/BiancoRoyal/node-bacstack/commit/4e0288c))
+* feat(client): implement missing un/confirmed event handler ([070d407](https://github.com/BiancoRoyal/node-bacstack/commit/070d407))
+* feat(services): implement EventEnrollmentSummary service ([fc40313](https://github.com/BiancoRoyal/node-bacstack/commit/fc40313))
+* feature(client): Add helper function to convert enum into string ([aeaa690](https://github.com/BiancoRoyal/node-bacstack/commit/aeaa690))
+* docs(client): add description to event inline documentation ([0e810d5](https://github.com/BiancoRoyal/node-bacstack/commit/0e810d5))
+* docs(client): add whoIs, timeSync, timeSyncUTC inline documentation ([4ed6d06](https://github.com/BiancoRoyal/node-bacstack/commit/4ed6d06))
+* docs(client): correct error event inline documentation ([cb53da9](https://github.com/BiancoRoyal/node-bacstack/commit/cb53da9))
+* docs(client): tag changed to type as it is used in bacappEncodeApplicationData ([f72bec6](https://github.com/BiancoRoyal/node-bacstack/commit/f72bec6))
+* docs(code-of-conduct): add Code of Conduct ([6229a2b](https://github.com/BiancoRoyal/node-bacstack/commit/6229a2b))
+* docs(contributing): factor out contribution-guidelines ([417b5ce](https://github.com/BiancoRoyal/node-bacstack/commit/417b5ce))
+* docs(faq): add frequently asked questions file ([ae494fd](https://github.com/BiancoRoyal/node-bacstack/commit/ae494fd))
+* docs(readme): add ASHRE copyright disclaimer ([7df8cc3](https://github.com/BiancoRoyal/node-bacstack/commit/7df8cc3))
+* docs(readme): add docs links to feature list ([453cd92](https://github.com/BiancoRoyal/node-bacstack/commit/453cd92))
+* docs(readme): bump copyright year to 2019 ([bb4749b](https://github.com/BiancoRoyal/node-bacstack/commit/bb4749b))
+* docs(readme): drop prototype / early development warning ([ca36f19](https://github.com/BiancoRoyal/node-bacstack/commit/ca36f19))
 
-* **bacnet-client:** use decodeCOVNotify for COV handling ([967f154](https://github.com/fh1ch/node-bacstack/commit/967f1544d4e88b185961571624e70d6d616ffed2)), closes [#69](https://github.com/fh1ch/node-bacstack/issues/69)  
-* **bacnet-node-type:** correct enum according to BACnet spec ([3c271fc](https://github.com/fh1ch/node-bacstack/commit/3c271fc49764962d54150109117986ee2c7d824a))
 
-### BREAKING CHANGES
+### BREAKING CHANGE
 
-* bacnet-client: various function parameters changed. Adapt according latest documentation.
+* addresses are no longer strings but are now objects, so that they can contain both the target IP and the remote node behind a BBMD
+* The `adpuTimeout` constructor parameter has been renamed to `apduTimeout`. See docs.
+* The `maxAdpu` callback parameter inside the `iAm` event has been renamed to `maxApdu`. See docs.
+* The optional input parameter type `MaxApdu` has been renamed to `MaxApduLengthAccepted` and has renamed values. See documentation.
+* The optional input parameter type `MaxSegments` has been renamed to `MaxSegmentsAccepted` and has renamed values. See documentation.
+* The values of the input parameter type `ApplicationTags` has changed by dropping it's `BACNET_APPLICATION_TAG_*` prefix. See documentation.
+* The values of the input parameter type `ReinitializedStates` has changed by dropping it's `BACNET_REINIT_*` prefix. See documentation.
+* whoIs and other functions now require a destination address, but it can be null to broadcast as before
 
-* bacnet-client: `isUTC` parameter has been omitted and was replaced by the `timeSyncUTC` function
 
-* bacnet-enum: `Bacnet` prefix for all enumerators has been dropped
+## <small>0.0.1-beta.13 (2017-12-24)</small>
 
-* client: `objectType` and `objectInstance` parameters for all functions have been replaced by a single `obejctId` parameter, expecting an object with `type` and `instance` attribute.
+* release version 0.0.1-beta.13 ([229095c](https://github.com/BiancoRoyal/node-bacstack/commit/229095c))
+* refactor: omit `bacnet-` file prefix for source-code ([7912339](https://github.com/BiancoRoyal/node-bacstack/commit/7912339))
+* refactor: rework and align naming of various API parameters ([2de1a99](https://github.com/BiancoRoyal/node-bacstack/commit/2de1a99))
+* refactor(bacnet-client): implement options parameter to client functions ([12f27ef](https://github.com/BiancoRoyal/node-bacstack/commit/12f27ef))
+* refactor(bacnet-client): split-up UTC and default time-sync ([10a9e24](https://github.com/BiancoRoyal/node-bacstack/commit/10a9e24))
+* refactor(bacnet-enum): omit `Bacnet` prefix for enumerators ([298edf1](https://github.com/BiancoRoyal/node-bacstack/commit/298edf1))
+* refactor(client): combine type and instance parameter to `obejctId` ([95eba2a](https://github.com/BiancoRoyal/node-bacstack/commit/95eba2a))
+* feat(bacnet-client): implement alarming and eventing ([fbf120c](https://github.com/BiancoRoyal/node-bacstack/commit/fbf120c))
+* fix(bacnet-client): use decodeCOVNotify for COV handling ([967f154](https://github.com/BiancoRoyal/node-bacstack/commit/967f154)), closes [#69](https://github.com/BiancoRoyal/node-bacstack/issues/69)
+* fix(bacnet-node-type): correct enum according to BACnet spec ([3c271fc](https://github.com/BiancoRoyal/node-bacstack/commit/3c271fc))
+* chore(travis): implement linting for commit message ([6d6ff69](https://github.com/BiancoRoyal/node-bacstack/commit/6d6ff69))
+* docs(readme): add full BACNET function list ([244cbf1](https://github.com/BiancoRoyal/node-bacstack/commit/244cbf1))
 
+
+### BREAKING CHANGE
+
+* `Bacnet` prefix for all enumerators has been dropped
+* `isUTC` parameter has been omitted and was replaced by the `timeSyncUTC` function
+* `objectIdentifier` renamed to `objectId`
+* `objectIdentifier` renamed to `objectId`
+* `objectType` and `objectInstance` parameters for all functions have been replaced by a single `obejctId` parameter, expecting an object with `type` and `instance` attribute.
 * `objId` renamed to `objectId`
-
 * `objName` renamed to `objectName`
-
-* `propertyIdentifier` renamed to `propertyId`
-
 * `propertyArrayIndex` renamed to `index`
-
-* `valueList` renamed to `values`
-
-* `objectIdentifier` renamed to `objectId`
-
+* `propertyIdentifier` renamed to `propertyId`
 * `propertyReferences` renamed to `properties`
-
-* `Recipient.net` renamed to `recipient.network`
-
 * `Recipient.adr` renamed to `recipient.address`
-
+* `Recipient.net` renamed to `recipient.network`
 * `subscriptionProcessId` renamed to `subscriptionProcessIdentifier`
-
-* `objectIdentifier` renamed to `objectId`
-
+* `valueList` renamed to `values`
 * drop of `len` parameter for properties
+* various function parameters changed. Adapt according latest documentation.
 
 
-<a name="0.0.1-beta.12"></a>
-# [0.0.1-beta.12](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.11...v0.0.1-beta.12) (2017-12-05)
+## <small>0.0.1-beta.12 (2017-12-05)</small>
 
-### Bug Fixes
-
-* **bacnet-asn1:** correct behaviour for releasing priority / writing of null ([d6c893b](https://github.com/fh1ch/node-bacstack/commit/d6c893bed497f3fbdabc4fb9697fffb57dceeb5f)), closes [#65](https://github.com/fh1ch/node-bacstack/issues/65)  
-
-
-<a name="0.0.1-beta.11"></a>
-# [0.0.1-beta.11](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.10...v0.0.1-beta.11) (2017-10-08)
-
-### Features
-
-* **bacnet-asn1:** implement all BACNET string encodings ([14699e2](https://github.com/fh1ch/node-bacstack/commit/14699e20b11cef5b3dc98fb465e602b6a31298fe))
+* release version 0.0.1-beta.12 ([c1d9bcf](https://github.com/BiancoRoyal/node-bacstack/commit/c1d9bcf))
+* test(bacnet-services): cover application tag null cases ([2235578](https://github.com/BiancoRoyal/node-bacstack/commit/2235578))
+* refactor(bacnet-asn1): factor-out and simplify application null tags ([fd04487](https://github.com/BiancoRoyal/node-bacstack/commit/fd04487))
+* fix(bacnet-asn1): correct behaviour for releasing priority / writing of null ([d6c893b](https://github.com/BiancoRoyal/node-bacstack/commit/d6c893b)), closes [#65](https://github.com/BiancoRoyal/node-bacstack/issues/65)
 
 
-<a name="0.0.1-beta.10"></a>
-# [0.0.1-beta.10](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.9...v0.0.1-beta.10) (2017-09-19)
 
-### Features
+## <small>0.0.1-beta.11 (2017-10-08)</small>
 
-* **bacnet-client:** implement handling of confirmed functions ([3e29ab0](https://github.com/fh1ch/node-bacstack/commit/3e29ab0a3b84a40f5e037d35e35929ec1602f5ba))
-* **bacnet-service:** implement decoding functionality for COV and CreateObject ([635e419](https://github.com/fh1ch/node-bacstack/commit/635e41954ffd95a4b0cff252581f380981d4d278))
-* **encoding:** add full read/write support for ISO 8859-1 charset ([e50b005](https://github.com/fh1ch/node-bacstack/commit/e50b005dcc4abdaf6aa233781816bc5d510fc439))
-* implemented more BACNET functions ([2721232](https://github.com/fh1ch/node-bacstack/commit/2721232a5c71f560b5e629004f1d6c73e626fd90))
-
-### BREAKING CHANGES
-
-* bacnet-asn1: requires renaming the `tag` parameter for all write commands to `type`
-
-* encoding: rename enum BacnetCharacterStringEncodings value CHARACTER_ISO8859 to CHARACTER_ISO8859_1 which conforms with the BACnet
-
-* index: the iAm event no longer passes multiple parameters but a single nested object
+* release version 0.0.1-beta.11 ([5bb917d](https://github.com/BiancoRoyal/node-bacstack/commit/5bb917d))
+* test(integration): adapt integration tests to latest chai version ([a6ffa63](https://github.com/BiancoRoyal/node-bacstack/commit/a6ffa63))
+* chore(npm): bump all dependency versions to latest ones ([5c49491](https://github.com/BiancoRoyal/node-bacstack/commit/5c49491))
+* feat(bacnet-asn1): implement all BACNET string encodings ([14699e2](https://github.com/BiancoRoyal/node-bacstack/commit/14699e2))
 
 
-<a name="0.0.1-beta.9"></a>
-# [0.0.1-beta.9](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.8...v0.0.1-beta.9) (2017-07-12)
 
-### Features
+## <small>0.0.1-beta.10 (2017-09-19)</small>
 
-* **bacnet-client:** expose BACNET errors and aborts to user ([8cda7de](https://github.com/fh1ch/node-bacstack/commit/8cda7de50f60c12cbaaf0c6d44240f15013ea040))
-* **bacnet-client:** expose underlying transport errors to user ([7d547be](https://github.com/fh1ch/node-bacstack/commit/7d547be4c0220eed7c6b0601116de079d30b4849))
-* **bacnet-client:** implement close function for BACstack and underlying UDP socket ([4be06bd](https://github.com/fh1ch/node-bacstack/commit/4be06bd2afd3775fdd76b907516cd7bc3d8bbb69))
-* **bacnet-services:** implement missing BACNET service encodings ([db6ac7f](https://github.com/fh1ch/node-bacstack/commit/db6ac7fd62e76f1f79992b90fbf4c42fb7f1b536))
-* **bacnet-services:** implement writePropertyMultiple service ([ea9332c](https://github.com/fh1ch/node-bacstack/commit/ea9332c945884e163dba9b908d2161047f322031))
-* **bacnet-transport:** allow reuse of network interface when using bacstack ([0fb216c](https://github.com/fh1ch/node-bacstack/commit/0fb216ca7ab94af6ea657c3a736d6079657e4ea0))
-* implement write-property-multiple ([5f9f7a0](https://github.com/fh1ch/node-bacstack/commit/5f9f7a0447c333414f8d9f2cd9316dbb3673bf8f))
-* implement reinitialize-device ([1283cc3](https://github.com/fh1ch/node-bacstack/commit/1283cc32f6b0b66ea71cb16751d82f53a8f0a548))
-* implement device-communication-control ([04a38a8](https://github.com/fh1ch/node-bacstack/commit/04a38a829afabd77c932698bec412525f4ad5ef5))
-* implement time-sync ([9980a4d](https://github.com/fh1ch/node-bacstack/commit/9980a4d7b8524a1175be9aec182dc58eab4a23ac))
+* release version 0.0.1-beta.10 ([304f760](https://github.com/BiancoRoyal/node-bacstack/commit/304f760))
+* feat: implemented more BACNET functions ([2721232](https://github.com/BiancoRoyal/node-bacstack/commit/2721232))
+* feat(bacnet-client): implement handling of confirmed functions ([3e29ab0](https://github.com/BiancoRoyal/node-bacstack/commit/3e29ab0))
+* feat(bacnet-service): implement decoding functionality for COV and CreateObject ([635e419](https://github.com/BiancoRoyal/node-bacstack/commit/635e419))
+* feat(encoding): add full read/write support for ISO 8859-1 charset ([e50b005](https://github.com/BiancoRoyal/node-bacstack/commit/e50b005))
+* refactor(bacnet-asn1): factor out buffer initialization and integer length detection ([ccfe925](https://github.com/BiancoRoyal/node-bacstack/commit/ccfe925))
+* refactor(bacnet-asn1): rename `tag` parameter to `type` ([35a46ce](https://github.com/BiancoRoyal/node-bacstack/commit/35a46ce))
+* refactor(bacnet-client): correct various code-climate issues ([2d4f065](https://github.com/BiancoRoyal/node-bacstack/commit/2d4f065))
+* refactor(index): make index function mapping obsolete ([9d09c82](https://github.com/BiancoRoyal/node-bacstack/commit/9d09c82))
+* refactor(index): rework iAm event to pass single object ([596c142](https://github.com/BiancoRoyal/node-bacstack/commit/596c142))
+* refactor(test): fix codeclimate findings in unit and integration tests ([5494edf](https://github.com/BiancoRoyal/node-bacstack/commit/5494edf))
+* chore(codeclimate): add sources to codeclimate rating ([c862c09](https://github.com/BiancoRoyal/node-bacstack/commit/c862c09))
+* chore(codeclimate): disable duplication engine due to false-positives ([6fc5fa7](https://github.com/BiancoRoyal/node-bacstack/commit/6fc5fa7))
+* chore(npm): bump debug version to 3.0.0 ([4d7d4de](https://github.com/BiancoRoyal/node-bacstack/commit/4d7d4de))
+* chore(npm): enable linting for tests as well ([b6d886a](https://github.com/BiancoRoyal/node-bacstack/commit/b6d886a))
+* docs(readme): fix codeclimate markdown linter findings ([96e99d4](https://github.com/BiancoRoyal/node-bacstack/commit/96e99d4))
 
-### Bug Fixes
 
-* **ba-enums:** make sure the exported enums are not overridden ([8369cc8](https://github.com/fh1ch/node-bacstack/commit/8369cc8daa0a97d5e20e554eea5e9fbc0d570c93))
-* **bacnet-client:** correct error message format for BACNET aborts and errors ([6533e3f](https://github.com/fh1ch/node-bacstack/commit/6533e3f3185a23b990fff66fd9b5122a1282f1a8))
-* **string-decode:** add decoding support for ISO 8859-1 ([a224928](https://github.com/fh1ch/node-bacstack/commit/a224928360da49d1c1d620b025f5066db006d1ff))
+### BREAKING CHANGE
 
-### BREAKING CHANGES
+* rename enum BacnetCharacterStringEncodings value CHARACTER_ISO8859 to CHARACTER_ISO8859_1 which conforms with the BACnet
+specification.
+* requires renaming the `tag` parameter for all write commands to `type`
+* the iAm event no longer passes multiple parameters but a single nested object
 
-* index: enumerations are no longer accessible via BACStack client instance and have been moved to the module level (`require("bacstack").enum;`).
+
+## <small>0.0.1-beta.9 (2017-07-12)</small>
+
+* release version 0.0.1-beta.9 ([0ce7538](https://github.com/BiancoRoyal/node-bacstack/commit/0ce7538))
+* refactor: use correct JS object instantiation ([a1df9d7](https://github.com/BiancoRoyal/node-bacstack/commit/a1df9d7))
+* refactor: use small-case for `Tag` and `Value` parameters ([ea614da](https://github.com/BiancoRoyal/node-bacstack/commit/ea614da))
+* refactor(bacnet-asn1): drop redundant implementation of decodeTagNumber function ([ac363b7](https://github.com/BiancoRoyal/node-bacstack/commit/ac363b7))
+* refactor(bacnet-asn1): rework all ASN1 function names to adhere the styleguide ([b31bc00](https://github.com/BiancoRoyal/node-bacstack/commit/b31bc00))
+* refactor(bacnet-asn1): rework all ASN1 variable names to adhere the styleguide ([ef92244](https://github.com/BiancoRoyal/node-bacstack/commit/ef92244))
+* refactor(bacnet-client): rework all BACNET client variable names to adhere the styleguide ([b0103f7](https://github.com/BiancoRoyal/node-bacstack/commit/b0103f7))
+* refactor(bacnet-npdu): rework all NPDU function names to adhere the styleguide ([c1171dd](https://github.com/BiancoRoyal/node-bacstack/commit/c1171dd))
+* refactor(bacnet-services): rework all BACNET service function names to adhere the styleguide ([435a773](https://github.com/BiancoRoyal/node-bacstack/commit/435a773))
+* refactor(index): move enum expose from instantiated object to root level ([47890ec](https://github.com/BiancoRoyal/node-bacstack/commit/47890ec))
+* docs(index): add enum references to inline code documentation ([871ee7f](https://github.com/BiancoRoyal/node-bacstack/commit/871ee7f))
+* docs(index): corrected spell mistakes in code documentation ([fa4c7fa](https://github.com/BiancoRoyal/node-bacstack/commit/fa4c7fa))
+* docs(index): use correct function call in inline-code example ([cc02211](https://github.com/BiancoRoyal/node-bacstack/commit/cc02211))
+* docs(readme): add supported BACNET services to README.md ([2d8116a](https://github.com/BiancoRoyal/node-bacstack/commit/2d8116a))
+* chore(jscs): drop capital-constructor ruleset ([0b751c1](https://github.com/BiancoRoyal/node-bacstack/commit/0b751c1))
+* chore(jscs): enforcing camel-case identifier via linter ([1bef480](https://github.com/BiancoRoyal/node-bacstack/commit/1bef480))
+* feat: implement device-communication-control ([04a38a8](https://github.com/BiancoRoyal/node-bacstack/commit/04a38a8))
+* feat: implement reinitialize-device ([1283cc3](https://github.com/BiancoRoyal/node-bacstack/commit/1283cc3))
+* feat: implement time-sync ([9980a4d](https://github.com/BiancoRoyal/node-bacstack/commit/9980a4d))
+* feat: implement write-property-multiple ([5f9f7a0](https://github.com/BiancoRoyal/node-bacstack/commit/5f9f7a0))
+* feat(bacnet-client): expose BACNET errors and aborts to user ([8cda7de](https://github.com/BiancoRoyal/node-bacstack/commit/8cda7de))
+* feat(bacnet-client): expose underlying transport errors to user ([7d547be](https://github.com/BiancoRoyal/node-bacstack/commit/7d547be))
+* feat(bacnet-client): implement close function for BACstack and underlying UDP socket ([4be06bd](https://github.com/BiancoRoyal/node-bacstack/commit/4be06bd))
+* feat(bacnet-services): implement missing BACNET service encodings ([db6ac7f](https://github.com/BiancoRoyal/node-bacstack/commit/db6ac7f))
+* feat(bacnet-services): implement writePropertyMultiple service ([ea9332c](https://github.com/BiancoRoyal/node-bacstack/commit/ea9332c))
+* feat(bacnet-transport): allow reuse of network interface when using bacstack ([0fb216c](https://github.com/BiancoRoyal/node-bacstack/commit/0fb216c))
+* fix(ba-enums): make sure the exported enums are not overridden ([8369cc8](https://github.com/BiancoRoyal/node-bacstack/commit/8369cc8))
+* fix(bacnet-client): correct error message format for BACNET aborts and errors ([6533e3f](https://github.com/BiancoRoyal/node-bacstack/commit/6533e3f))
+* fix(string-decode): add decoding support for ISO 8859-1 ([a224928](https://github.com/BiancoRoyal/node-bacstack/commit/a224928))
+
+
+### BREAKING CHANGE
 
 * `Tag` and `Value` parameters for writeProperty and writePropertyMultiple have to be adapted to small-case
+* enumerations are no longer accessible via BACStack client instance and have been moved to the module level (`require("bacstack").enum;`).
 
 
-<a name="0.0.1-beta.8"></a>
-# [0.0.1-beta.8](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.7...v0.0.1-beta.8) (2017-06-19)
+## <small>0.0.1-beta.8 (2017-06-19)</small>
 
-### Features
-
-* **bacnet-client:** implement additional unsupported services ([d82fefe](https://github.com/fh1ch/node-bacstack/commit/d82fefee7a2a5d53e9551cdf1ce09d9c6ca238cd))
-* **bacnet-client:** rework unconfirmed services to utilize even emitter ([b5b8d78](https://github.com/fh1ch/node-bacstack/commit/b5b8d785e5e153a287cf73dc38f522e6a8daf347))
-
-### Bug Fixes
-
-* **bacnet-client:** ensure invokeId range of 0-255 ([c195331](https://github.com/fh1ch/node-bacstack/commit/c19533139097eccd7cefde4a4d709fa7923b2ad6))
+* release version 0.0.1-beta.8 ([8126703](https://github.com/BiancoRoyal/node-bacstack/commit/8126703))
+* test(bacnet-services): add write-property unit-test coverage ([7a8ca7f](https://github.com/BiancoRoyal/node-bacstack/commit/7a8ca7f))
+* feat(bacnet-client): implement additional unsupported services ([d82fefe](https://github.com/BiancoRoyal/node-bacstack/commit/d82fefe))
+* feat(bacnet-client): rework unconfirmed services to utilize even emitter ([b5b8d78](https://github.com/BiancoRoyal/node-bacstack/commit/b5b8d78))
+* fix(bacnet-client): ensure invokeId range of 0-255 ([c195331](https://github.com/BiancoRoyal/node-bacstack/commit/c195331))
 
 
-<a name="0.0.1-beta.7"></a>
-# [0.0.1-beta.7](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.6...v0.0.1-beta.7) (2017-06-11)
 
-### Bug Fixes
+## <small>0.0.1-beta.7 (2017-06-11)</small>
 
-* **bacnet-services:** correct all invalid no-array and no-priority checks ([ba16839](https://github.com/fh1ch/node-bacstack/commit/f0cb5bdf0da45903f893d915e9eead2e555800d8)), closes [#20](https://github.com/fh1ch/node-bacstack/issues/20)  
-
-
-<a name="0.0.1-beta.6"></a>
-# [0.0.1-beta.6](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.5...v0.0.1-beta.6) (2017-06-04)
-
-### Features
-
-* **bacnet-asn1:** implement read-access-specification, cov-subscription, calendar decoding functionality ([b015f62](https://github.com/fh1ch/node-bacstack/commit/b015f627b06123de531462be04c8aa1b8ae9e1d9))
-* **bacnet-asn1:** implement additional ASN1 base encoding functions ([2d6276e](https://github.com/fh1ch/node-bacstack/commit/2d6276ee9bba71b855adfb3110f9d91edb5e19be))
-* **bacnet-services:** implemented various new BACNET service encodings ([d891305](https://github.com/fh1ch/node-bacstack/commit/d891305acf6d2eda10711d81f4cdae2279dd79b1))
-* **bacnet-services.spec:** implement test coverage for cov-subscription and read-access-specification value types ([6665a7c](https://github.com/fh1ch/node-bacstack/commit/6665a7cc24b40ce90024d56c1833fc28a66dfd50))
-* add JSDoc inline documentation and gh-page publishing ([44f88be](https://github.com/fh1ch/node-bacstack/commit/44f88be7a4f42195c9a4cae29efab717618681fb))
-
-### Bug Fixes
-
-* **bacnet-asn1:** add guard to prevent endless loops ([63d7d8f](https://github.com/fh1ch/node-bacstack/commit/63d7d8fefc0aaf3135a6d9ec330c8bf4d882cbff))
-* **bacnet-asn1:** correct generic blob decoding context implementation ([63eacc6](https://github.com/fh1ch/node-bacstack/commit/63eacc61203f08e6fb4f403f1d00ceedca6138f6))
-* **bacnet-asn1:** correct variable initialization for datetime decoding ([3bc1591](https://github.com/fh1ch/node-bacstack/commit/3bc159181c5ad37f2df3f3e003bd7a805dcda2cb))
-* **bacnet-asn1:** correct bit-string encoding and decoding ([14cda6d](https://github.com/fh1ch/node-bacstack/commit/14cda6d9edf5a37432adce8d4f467c742169b269))
-* **bacnet-asn1:** correct octet-string encoding and decoding ([aee51a5](https://github.com/fh1ch/node-bacstack/commit/aee51a5be16cf4c229dec31249807bc577a141f5))
-* **bacnet-asn1:** correct ASN1 date and time encodings ([486153c](https://github.com/fh1ch/node-bacstack/commit/486153c1a055a7317e181c03258b611e6c3b8966))
-* **bacnet-asn1:** align error handling to prevent dead-loop ([3feaaba](https://github.com/fh1ch/node-bacstack/commit/3feaabae56973831cf8236432ecb60142b37a6f4))
-* **bacnet-client:** correctly handle invalid encoding cases ([347b0ed](https://github.com/fh1ch/node-bacstack/commit/347b0ed8fc4671ca1d49a49431f96dadfb97b9fb))
-* **bacnet-client:** remove callback from store if already invoked ([16e4483](https://github.com/fh1ch/node-bacstack/commit/16e4483a39187069a6a9f1f53117e135ac924ee4))
-* **bacnet-services:** correct string and tag comparison ([0302fe0](https://github.com/fh1ch/node-bacstack/commit/0302fe0d3748c1892b21c0cc8237c3bc74eece26))
+* release version 0.0.1-beta.7 ([c53053c](https://github.com/BiancoRoyal/node-bacstack/commit/c53053c))
+* fix(bacnet-services): correct all invalid no-array and no-priority checks ([f0cb5bd](https://github.com/BiancoRoyal/node-bacstack/commit/f0cb5bd)), closes [#20](https://github.com/BiancoRoyal/node-bacstack/issues/20)
 
 
-<a name="0.0.1-beta.5"></a>
-# [0.0.1-beta.5](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.4...v0.0.1-beta.5) (2017-05-08)
 
-### Features
+## <small>0.0.1-beta.6 (2017-06-04)</small>
 
-* **bacnet-asn1:** add decode support for context encoded properties ([a82fb58](https://github.com/fh1ch/node-bacstack/commit/a82fb582938da9a7921b35e9ec4c06be13a2f403))
-* **bacnet-client:** add support for custom transports ([8a6a64e](https://github.com/fh1ch/node-bacstack/commit/8a6a64e45a5950469279185c77de5d372cc34122))
-* **bacnet-transport:** use actual max payload size to prevent segmentation issues ([2a1a887](https://github.com/fh1ch/node-bacstack/commit/2a1a887c0b923077a59e6fb301e29bf51889e2ff))
-
-### Bug Fixes
-
-* **bacnet-asn1:** drop redundant boolean length accumulation ([c9622d6](https://github.com/fh1ch/node-bacstack/commit/c9622d684765f5f8c30eb8b7f0047eaa99de0b74))
-* **bacnet-asn1:** properly handle boolean decoding with length 0 ([31b7a28](https://github.com/fh1ch/node-bacstack/commit/31b7a28b891ea01c36c8e9578619d5dec417fe2e))
-* **bacnet-client:** start segmentation with correct sequence number 0 ([cbc3076](https://github.com/fh1ch/node-bacstack/commit/cbc307682f041f200a7692462e411a59a8607e1b))
-
-
-<a name="0.0.1-beta.4"></a>
-# [0.0.1-beta.4](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.3...v0.0.1-beta.4) (2017-05-04)
-
-### Features
-
-* **bacnet-asn1:** expose property value type ([b6ca82b](https://github.com/fh1ch/node-bacstack/commit/b6ca82b9a9f6dd96191853d9ddbb3275b07b159b))
-
-### Bug Fixes
-
-* **bacnet-client:** re-enable who-is handler ([ae1d710](https://github.com/fh1ch/node-bacstack/commit/ae1d710494cf75a1557235e28af2a3c6506aea77))
-
-### BREAKING CHANGES
-
-* bacnet-asn1: property values changed from single value array (`[12]`) to array of object `[{value: 12, type: 3}]`
-
-
-<a name="0.0.1-beta.3"></a>
-# [0.0.1-beta.3](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.2...v0.0.1-beta.3) (2017-04-14)
-
-### Bug Fixes
-
-* **bacnet-asn1:** implement missing stubbed functions ([a49b103](https://github.com/fh1ch/node-bacstack/commit/a49b103803bd3f7802fc84c3360a1ae30398a874)), closes [#3](https://github.com/fh1ch/node-bacstack/issues/3)  
-* **bacnet-client:** prevent redundant increment of invoke counter ([a59b023](https://github.com/fh1ch/node-bacstack/commit/a59b023c8aa75f4f7b12582d5df63566367d369f)), closes [#2](https://github.com/fh1ch/node-bacstack/issues/2)  
-* correct various JSHint linter findings ([ee1b2a5](https://github.com/fh1ch/node-bacstack/commit/ee1b2a5e1d2a28b43f630ed8976baedf52ca3968))
+* refactor(bacnet-client,bacnet-transport): improve code-style and enhance readability ([9401006](https://github.com/BiancoRoyal/node-bacstack/commit/9401006))
+* release version 0.0.1-beta.6 ([e6cd8e6](https://github.com/BiancoRoyal/node-bacstack/commit/e6cd8e6))
+* fix(bacnet-asn1): add guard to prevent endless loops ([63d7d8f](https://github.com/BiancoRoyal/node-bacstack/commit/63d7d8f))
+* fix(bacnet-asn1): align error handling to prevent dead-loop ([3feaaba](https://github.com/BiancoRoyal/node-bacstack/commit/3feaaba))
+* fix(bacnet-asn1): correct ASN1 date and time encodings ([486153c](https://github.com/BiancoRoyal/node-bacstack/commit/486153c))
+* fix(bacnet-asn1): correct bit-string encoding and decoding ([14cda6d](https://github.com/BiancoRoyal/node-bacstack/commit/14cda6d))
+* fix(bacnet-asn1): correct generic blob decoding context implementation ([63eacc6](https://github.com/BiancoRoyal/node-bacstack/commit/63eacc6))
+* fix(bacnet-asn1): correct octet-string encoding and decoding ([aee51a5](https://github.com/BiancoRoyal/node-bacstack/commit/aee51a5))
+* fix(bacnet-asn1): correct variable initialization for datetime decoding ([3bc1591](https://github.com/BiancoRoyal/node-bacstack/commit/3bc1591))
+* fix(bacnet-client): correctly handle invalid encoding cases ([347b0ed](https://github.com/BiancoRoyal/node-bacstack/commit/347b0ed))
+* fix(bacnet-client): remove callback from store if already invoked ([16e4483](https://github.com/BiancoRoyal/node-bacstack/commit/16e4483))
+* fix(bacnet-services): correct string and tag comparison ([0302fe0](https://github.com/BiancoRoyal/node-bacstack/commit/0302fe0))
+* feat: add JSDoc inline documentation and gh-page publishing ([44f88be](https://github.com/BiancoRoyal/node-bacstack/commit/44f88be))
+* feat(bacnet-asn1): implement additional ASN1 base encoding functions ([2d6276e](https://github.com/BiancoRoyal/node-bacstack/commit/2d6276e))
+* feat(bacnet-asn1): implement read-access-specification, cov-subscription, calendar decoding function ([b015f62](https://github.com/BiancoRoyal/node-bacstack/commit/b015f62))
+* feat(bacnet-services.spec): implement test coverage for cov-subscription and read-access-specificati ([6665a7c](https://github.com/BiancoRoyal/node-bacstack/commit/6665a7c))
+* feat(bacnet-services): implemented various new BACNET service encodings ([d891305](https://github.com/BiancoRoyal/node-bacstack/commit/d891305))
+* refactor(bacnet-asn1): expose various ASN1 functions ([6b8d6c9](https://github.com/BiancoRoyal/node-bacstack/commit/6b8d6c9))
+* refactor(bacnet-enum): align NPDU control names ([d483fc5](https://github.com/BiancoRoyal/node-bacstack/commit/d483fc5))
+* refactor(bacnet-enum): replace undefined values with real ones ([447cc96](https://github.com/BiancoRoyal/node-bacstack/commit/447cc96))
+* refactor(decode_unsigned): simplify decode_unsigned function by consolidating ranges ([62b04f9](https://github.com/BiancoRoyal/node-bacstack/commit/62b04f9))
+* refactor(encodeSigned): simplify encodeSigned function by consolidating ranges ([780dbb3](https://github.com/BiancoRoyal/node-bacstack/commit/780dbb3))
+* refactor(encodeUnsigned): simplify encodeUnsigned function by consolidating ranges ([2ad10c4](https://github.com/BiancoRoyal/node-bacstack/commit/2ad10c4))
+* test: add additional unit-test coverage cases ([85e9b4f](https://github.com/BiancoRoyal/node-bacstack/commit/85e9b4f))
+* test(bacnet-services): add initial test coverage for BACNET service encodings ([a2c34de](https://github.com/BiancoRoyal/node-bacstack/commit/a2c34de))
+* test(read-property-multiple): add missing assertions for bit-string type properties ([d5e94ee](https://github.com/BiancoRoyal/node-bacstack/commit/d5e94ee))
+* chore(jscsrc): allow longer code-lines until refactoring is trough ([a3227c3](https://github.com/BiancoRoyal/node-bacstack/commit/a3227c3))
 
 
-<a name="0.0.1-beta.2"></a>
-# [0.0.1-beta.2](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.1...v0.0.1-beta.2) (2017-04-02)
 
-### Bug Fixes
+## <small>0.0.1-beta.5 (2017-05-08)</small>
 
-* **bacnet-client:** add missing callback definition to readProperty function ([ba16839](https://github.com/fh1ch/node-bacstack/commit/ba16839b3f73395ddeefcae891830d49f9a3431b))
-* **bacnet-client:** add missing callback `next` to writeProperty function ([a0cfa37](https://github.com/fh1ch/node-bacstack/commit/a0cfa373ea06791ac4890e80240bd99d9c65e9f8))
-* **bacnet-transport:** enable broadcast support in UDP socket ([b6c49c7](https://github.com/fh1ch/node-bacstack/commit/b6c49c715f487b25cfe2f729d6f2569ca2379aff))
-
-
-<a name="0.0.1-beta.1"></a>
-# [0.0.1-beta.1](https://github.com/fh1ch/node-bacstack/compare/v0.0.1-beta.0...v0.0.1-beta.1) (2017-02-26)
-
-### Features
-
-* **asn1:** implement octet-string decoding ([87348de](https://github.com/fh1ch/node-bacstack/commit/87348de3abedaec5520236b9bab22dbb64774c9f))
-* **client:** implement default segmentation handling ([58a53e3](https://github.com/fh1ch/node-bacstack/commit/58a53e3d71568e2d8b3952ab564fb3fd55f3aec1))
-* add configuration possibility to bacstack ([6d3c15b](https://github.com/fh1ch/node-bacstack/commit/6d3c15be1cb24b9f554c02b40c7e9b058f9186a2))
+* release version 0.0.1-beta.5 ([c7eccb1](https://github.com/BiancoRoyal/node-bacstack/commit/c7eccb1))
+* fix(bacnet-asn1): drop redundant boolean length accumulation ([c9622d6](https://github.com/BiancoRoyal/node-bacstack/commit/c9622d6))
+* fix(bacnet-asn1): properly handle boolean decoding with length 0 ([31b7a28](https://github.com/BiancoRoyal/node-bacstack/commit/31b7a28))
+* fix(bacnet-client): start segmentation with correct sequence number 0 ([cbc3076](https://github.com/BiancoRoyal/node-bacstack/commit/cbc3076))
+* feat(bacnet-asn1): add decode support for context encoded properties ([a82fb58](https://github.com/BiancoRoyal/node-bacstack/commit/a82fb58))
+* feat(bacnet-client): add support for custom transports ([8a6a64e](https://github.com/BiancoRoyal/node-bacstack/commit/8a6a64e))
+* feat(bacnet-transport): use actual max payload size to prevent segmentation issues ([2a1a887](https://github.com/BiancoRoyal/node-bacstack/commit/2a1a887))
+* test(read-property-multiple): add integration tests using real recorded data ([320366a](https://github.com/BiancoRoyal/node-bacstack/commit/320366a))
+* refactor(integration): rework integration test utils ([571a191](https://github.com/BiancoRoyal/node-bacstack/commit/571a191))
 
 
-<a name="0.0.1-beta.0"></a>
-# 0.0.1-beta.0 (2017-02-23)
 
-### Features
+## <small>0.0.1-beta.4 (2017-05-04)</small>
 
-* create initial implementation ([1c4f139](https://github.com/fh1ch/node-bacstack/commit/1c4f1398d4c211f7991fcab40a901d08701796bd))
-* create initial project structure ([4b2c8c0](https://github.com/fh1ch/node-bacstack/commit/4b2c8c063ae119590eeefc81da1dfc4633d1b13e))
+* release version 0.0.1-beta.4 ([f10da21](https://github.com/BiancoRoyal/node-bacstack/commit/f10da21))
+* feat(bacnet-asn1): expose property value type ([b6ca82b](https://github.com/BiancoRoyal/node-bacstack/commit/b6ca82b))
+* fix(bacnet-client): re-enable who-is handler ([ae1d710](https://github.com/BiancoRoyal/node-bacstack/commit/ae1d710))
 
-### Bug Fixes
 
-* fix various syntax issues ([3259856](https://github.com/fh1ch/node-bacstack/commit/325985624e95caaa622efad486ac456554dacd96))
+### BREAKING CHANGE
+
+* property values changed from single value array (`[12]`) to array of object `[{value: 12, type: 3}]`
+
+
+## <small>0.0.1-beta.3 (2017-04-14)</small>
+
+* release version 0.0.1-beta.3 ([2e06b15](https://github.com/BiancoRoyal/node-bacstack/commit/2e06b15))
+* chore(jshint): remove latedef rule to prevent false-positive results on tail-recursive functions ([afec227](https://github.com/BiancoRoyal/node-bacstack/commit/afec227))
+* chore(travis): add integration tests to Travis-CI build ([5cb3f86](https://github.com/BiancoRoyal/node-bacstack/commit/5cb3f86))
+* chore(travis): remove Node.js 0.12 Travis-CI build ([f92911a](https://github.com/BiancoRoyal/node-bacstack/commit/f92911a))
+* test: create initial unit-test setup including coverage ([6123189](https://github.com/BiancoRoyal/node-bacstack/commit/6123189))
+* test(integration): create basic integration tests setup ([5c37ed8](https://github.com/BiancoRoyal/node-bacstack/commit/5c37ed8))
+* refactor(jscs): fix all JSCS linting errors and adapted JSCS rules ([ee9da58](https://github.com/BiancoRoyal/node-bacstack/commit/ee9da58))
+* fix: correct various JSHint linter findings ([ee1b2a5](https://github.com/BiancoRoyal/node-bacstack/commit/ee1b2a5))
+* fix(bacnet-asn1): implement missing stubbed functions ([a49b103](https://github.com/BiancoRoyal/node-bacstack/commit/a49b103)), closes [#3](https://github.com/BiancoRoyal/node-bacstack/issues/3)
+* fix(bacnet-client): prevent redundant increment of invoke counter ([a59b023](https://github.com/BiancoRoyal/node-bacstack/commit/a59b023)), closes [#2](https://github.com/BiancoRoyal/node-bacstack/issues/2)
+
+
+
+## <small>0.0.1-beta.2 (2017-04-02)</small>
+
+* release version 0.0.1-beta.2 ([2010138](https://github.com/BiancoRoyal/node-bacstack/commit/2010138))
+* fix(bacnet-client): add missing callback `next` to writeProperty function ([a0cfa37](https://github.com/BiancoRoyal/node-bacstack/commit/a0cfa37))
+* fix(bacnet-client): add missing callback definition to readProperty function ([ba16839](https://github.com/BiancoRoyal/node-bacstack/commit/ba16839))
+* fix(bacnet-transport): enable broadcast support in UDP socket ([b6c49c7](https://github.com/BiancoRoyal/node-bacstack/commit/b6c49c7))
+* docs(readme): adapt writeProperty documentation to actual implementation ([8d18cf2](https://github.com/BiancoRoyal/node-bacstack/commit/8d18cf2))
+
+
+
+## <small>0.0.1-beta.1 (2017-02-26)</small>
+
+* release version 0.0.1-beta.1 ([651992b](https://github.com/BiancoRoyal/node-bacstack/commit/651992b))
+* docs(readme): add additional badges for npmjs, codeclimate and coverals to readme ([58c1683](https://github.com/BiancoRoyal/node-bacstack/commit/58c1683))
+* docs(readme): rework readme usage structure and add `readPropertyMultiple ` function ([d99cd9d](https://github.com/BiancoRoyal/node-bacstack/commit/d99cd9d))
+* refactor(client): rework client interface and adapt to documentation ([05294dd](https://github.com/BiancoRoyal/node-bacstack/commit/05294dd))
+* feat: add configuration possibility to bacstack ([6d3c15b](https://github.com/BiancoRoyal/node-bacstack/commit/6d3c15b))
+* feat(asn1): implement octet-string decoding ([87348de](https://github.com/BiancoRoyal/node-bacstack/commit/87348de))
+* feat(client): implement default segmentation handling ([58a53e3](https://github.com/BiancoRoyal/node-bacstack/commit/58a53e3))
+
+
+
+## <small>0.0.1-beta.0 (2017-02-23)</small>
+
+* release version 0.0.1-beta.0 ([03b829b](https://github.com/BiancoRoyal/node-bacstack/commit/03b829b))
+* chore: rename NPM package to `bacstack` ([9370d1f](https://github.com/BiancoRoyal/node-bacstack/commit/9370d1f))
+* fix: fix various syntax issues ([3259856](https://github.com/BiancoRoyal/node-bacstack/commit/3259856))
+* docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
+* feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
+* feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+

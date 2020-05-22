@@ -6,6 +6,8 @@ rm -rf docs/
 
 rm -rf reports/
 
+rm -rf .nyc_output/
+
 rm package-lock.json
 
 npm cache verify
