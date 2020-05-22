@@ -17,6 +17,9 @@ describe('bacnet - readProperty compliance', () => {
       console.log(msg);
       if (rinfo) console.log(rinfo);
     });
+    bacnetClient.on('iAm', (device) => {
+      discoveredAddress = device.header.sender;
+    });
     bacnetClient.on('error', (err) => {
       console.error(err);
       bacnetClient.close();
@@ -39,8 +42,10 @@ describe('bacnet - readProperty compliance', () => {
 
   it('should find the device simulator device', (next) => {
     bacnetClient.on('iAm', (device) => {
-      expect(device.payload.deviceId).to.eql(1234);
       discoveredAddress = device.header.sender;
+      expect(device.payload.deviceId).to.eql(1234);
+      expect(discoveredAddress).to.be.an('object');
+      expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
       next();
     });
     bacnetClient.whoIs();
