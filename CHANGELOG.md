@@ -1,3 +1,39 @@
+## <small>0.1.2-beta.1 (2020-05-22)</small>
+
+* chore: badges and Logo ([f9adb45](https://github.com/BiancoRoyal/node-bacstack/commit/f9adb45))
+* chore: badges and Logo ([0242d0f](https://github.com/BiancoRoyal/node-bacstack/commit/0242d0f))
+* chore: changelog rewrite and no commit lint anymore ([227e2af](https://github.com/BiancoRoyal/node-bacstack/commit/227e2af))
+* chore: readme ([e9c632f](https://github.com/BiancoRoyal/node-bacstack/commit/e9c632f))
+* chore: Update CONTRIBUTING.md ([327f1a9](https://github.com/BiancoRoyal/node-bacstack/commit/327f1a9))
+* chore: Update LICENSE.md ([59ee1ec](https://github.com/BiancoRoyal/node-bacstack/commit/59ee1ec))
+* chore:Update CONTRIBUTING.md ([dbb8122](https://github.com/BiancoRoyal/node-bacstack/commit/dbb8122))
+* Update CONTRIBUTING.md ([2cb25be](https://github.com/BiancoRoyal/node-bacstack/commit/2cb25be))
+* Update CONTRIBUTING.md ([af20c0c](https://github.com/BiancoRoyal/node-bacstack/commit/af20c0c))
+* Update LICENSE.md ([08c59f4](https://github.com/BiancoRoyal/node-bacstack/commit/08c59f4))
+* feat(client): add a client "listening" event which is fired once the UDP server is listening for mes ([d860966](https://github.com/BiancoRoyal/node-bacstack/commit/d860966))
+* feat(client): add some more debug messages ([7593d2a](https://github.com/BiancoRoyal/node-bacstack/commit/7593d2a))
+* feat(client): also provide information like erroClass, errorCode and abortReason in the returned err ([b5a2490](https://github.com/BiancoRoyal/node-bacstack/commit/b5a2490))
+* feat(client): structure debug logging into "client", "transport" and "trace" scopes to have more con ([18717f6](https://github.com/BiancoRoyal/node-bacstack/commit/18717f6))
+* feat(examples): add first example scripts ([7888740](https://github.com/BiancoRoyal/node-bacstack/commit/7888740))
+* feat(transport): remember last sent messages to detect on broadcast cases if we receive our own mess ([0fd4f2b](https://github.com/BiancoRoyal/node-bacstack/commit/0fd4f2b))
+* feat(transport): structure debug logging into "client", "transport" and "trace" scopes to have more  ([ada712e](https://github.com/BiancoRoyal/node-bacstack/commit/ada712e))
+* fix(bvlc): all constants on file level should be written uppercase ([54e52f5](https://github.com/BiancoRoyal/node-bacstack/commit/54e52f5))
+* fix(client): correct the whoIs parameters ([de5f955](https://github.com/BiancoRoyal/node-bacstack/commit/de5f955))
+* fix(client): correctly check for event listeners for incoming service requests and events ([c217c34](https://github.com/BiancoRoyal/node-bacstack/commit/c217c34))
+* fix(client): correctly send unicast if an IP is provided as string as receiver, fixes https://github ([d25254c](https://github.com/BiancoRoyal/node-bacstack/commit/d25254c))
+* fix(npdu): all constants on file level should be written uppercase ([39b1b3a](https://github.com/BiancoRoyal/node-bacstack/commit/39b1b3a))
+* fix(transport): all constants on file level should be written uppercase ([e39c916](https://github.com/BiancoRoyal/node-bacstack/commit/e39c916))
+* deps(package): update package deps ([396e538](https://github.com/BiancoRoyal/node-bacstack/commit/396e538))
+* deps(package): update package deps ([d7b78ab](https://github.com/BiancoRoyal/node-bacstack/commit/d7b78ab))
+* test(compliance): add some more compliance tests ([eb137cb](https://github.com/BiancoRoyal/node-bacstack/commit/eb137cb))
+* test(compliance): output debug log when running tests ([0b6ef0f](https://github.com/BiancoRoyal/node-bacstack/commit/0b6ef0f))
+
+
+### BREAKING CHANGE
+
+* Only the new options-object style is supported now to provide lower and upper deviceId Limits!
+
+
 ## <small>0.1.1-beta.1 (2020-05-18)</small>
 
 * chore: docker compliance tests via docker from biancoroyal image ([3fa63ce](https://github.com/BiancoRoyal/node-bacstack/commit/3fa63ce))

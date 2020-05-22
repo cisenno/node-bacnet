@@ -21,7 +21,7 @@ jobs:
         - chmod +x docker-compose
         - sudo mv docker-compose /usr/local/bin
       script:
-        - "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client"
+        - "npm run docker"
     - stage: pages
       node_js: "lts/*"
       sudo: false
