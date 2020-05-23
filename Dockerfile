@@ -5,7 +5,7 @@ WORKDIR /bacstack
 
 # Install dependencies
 COPY package.json .
-RUN npm install
+RUN npm install && npm i --only=dev
 
 # Add node-bacstack
 Add . .
