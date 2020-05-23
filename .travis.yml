@@ -22,6 +22,10 @@ jobs:
       script:
         - "npm run docker"
     - stage: pages
+      branches:
+        only:
+          - master
+          - /^v\d+\.\d.\d*$/
       node_js: "lts/*"
       sudo: false
       script:
