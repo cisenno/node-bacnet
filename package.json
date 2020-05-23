@@ -6,7 +6,7 @@
   "scripts": {
     "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
     "lint": "jshint lib/ test/ index.js && jscs lib/ test/ index.js",
-    "test": "npm run test:unit && npm run test:integration && npm run docker",
+    "test": "npm run test:unit && npm run test:integration",
     "coverage": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm test",
     "test:unit": "DEBUG=bacnet* mocha test/unit/*.spec.js",
     "test:integration": "DEBUG=bacnet* mocha test/integration/*.spec.js --timeout 5000",

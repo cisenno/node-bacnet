@@ -3,6 +3,7 @@
 ![NodeJS_Version](http://b.repl.ca/v1/NodeJS-LTS-green.png)
 [![NPM download](https://img.shields.io/npm/dm/node-bacnet.svg)](http://www.npm-stats.com/~packages/node-bacnet)
 [![Build Status](https://travis-ci.org/BiancoRoyal/node-bacstack.svg?branch=master)](https://travis-ci.org/BiancoRoyal/node-bacstack)
+[![Coverage Status](https://coveralls.io/repos/github/BiancoRoyal/node-bacstack/badge.svg?branch=master)](https://coveralls.io/github/BiancoRoyal/node-bacstack?branch=master)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/BiancoRoyal/node-bacstack)
 
 # node-bacnet
