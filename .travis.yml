@@ -33,3 +33,12 @@ jobs:
         skip_cleanup: true
         on:
           tags: true
+cache:
+  directories:
+    - "node_modules"
+branches:
+  only:
+    - master
+    - develop
+    - alpha
+    - beta
