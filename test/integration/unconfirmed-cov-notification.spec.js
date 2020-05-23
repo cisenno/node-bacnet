@@ -8,7 +8,7 @@ describe('bacnet - unconfirmedCOVNotification integration', () => {
   it('should correctly send a telegram', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.unconfirmedCOVNotification(
-        '127.0.0.1', 3, 433, {type: 2, instance: 122}, 120, [
+        '127.0.0.2', 3, 433, {type: 2, instance: 122}, 120, [
           {
             property: {id: 85},
             value: [{type: baEnum.ApplicationTags.REAL, value: 12.3}]

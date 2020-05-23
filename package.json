@@ -1,14 +1,16 @@
 {
   "name": "node-bacnet",
-  "version": "0.1.1-beta.1",
-  "description": "A BACnet protocol stack written in pure JavaScript.",
+  "version": "0.1.2-beta.1",
+  "description": "The BACnet protocol library written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
-    "changelog": "commitlint --from=master",
+    "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
     "lint": "jshint lib/ test/ index.js && jscs lib/ test/ index.js",
-    "test": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-test mocha test/unit/*.spec.js",
-    "integration": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-integration mocha test/integration/*.spec.js --timeout 5000",
-    "compliance": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage-compliance mocha test/compliance/*.spec.js --timeout 5000",
+    "test": "npm run test:unit && npm run test:integration",
+    "coverage": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm test",
+    "test:unit": "DEBUG=bacnet* mocha test/unit/*.spec.js",
+    "test:integration": "DEBUG=bacnet* mocha test/integration/*.spec.js --timeout 5000",
+    "test:compliance": "DEBUG=bacnet* mocha test/compliance/*.spec.js --timeout 5000",
     "docs": "jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
     "release": "standard-version -a",
     "release:beta": "standard-version --prerelease beta",
@@ -43,7 +45,7 @@
     }
   ],
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10"
   },
   "commitlint": {
     "extends": [
@@ -57,19 +59,17 @@
   "homepage": "https://github.com/BiancoRoyal/node-bacstack#readme",
   "dependencies": {
     "debug": "^4.1.1",
-    "iconv-lite": "^0.5.0"
+    "iconv-lite": "^0.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.1",
-    "@commitlint/config-conventional": "^7.5.0",
-    "@commitlint/travis-cli": "^7.5.1",
     "chai": "^4.2.0",
-    "docdash": "^1.1.1",
+    "conventional-changelog-cli": "^2.0.27",
+    "docdash": "^1.2.0",
     "jscs": "^3.0.7",
-    "jsdoc": "^3.6.3",
-    "jshint": "^2.10.2",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
+    "jsdoc": "^3.6.4",
+    "jshint": "^2.11.1",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
     "standard-version": "^8.0.0"
   },
   "files": [

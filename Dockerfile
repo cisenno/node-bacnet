@@ -5,10 +5,10 @@ WORKDIR /bacstack
 
 # Install dependencies
 COPY package.json .
-RUN npm install
+RUN npm install && npm i --only=dev
 
 # Add node-bacstack
 Add . .
 
 # Run compliance tests
-CMD npm run compliance
+CMD DEBUG=bacnet* npm run test:compliance

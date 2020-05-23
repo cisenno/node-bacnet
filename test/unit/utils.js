@@ -1,8 +1,12 @@
 'use strict';
 
-const bacnet            = require('../../');
+const coreExports = {
+  debug: require('debug')('bacnet:test:unit:debug'),
+  trace: require('debug')('bacnet:test:unit:trace'),
+  bacnetClient:  require('../../')
+};
 
-module.exports.bacnetClient = bacnet;
+module.exports = coreExports;
 
 module.exports.getBuffer = () => {
   return {

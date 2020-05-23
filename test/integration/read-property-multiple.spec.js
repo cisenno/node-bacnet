@@ -9,7 +9,7 @@ describe('bacnet - readPropertyMultiple integration', () => {
     const requestArray = [
       {objectId: {type: 8, instance: 4194303}, properties: [{id: 8}]}
     ];
-    client.readPropertyMultiple('127.0.0.1', requestArray, (err, value) => {
+    client.readPropertyMultiple('127.0.0.2', requestArray, (err, value) => {
       expect(err.message).to.eql('ERR_TIMEOUT');
       expect(value).to.eql(undefined);
       client.close();
@@ -24,7 +24,7 @@ describe('bacnet - readPropertyMultiple integration', () => {
     const requestArray = [
       {objectId: {type: 8, instance: 4194303}, properties: [{id: 8}]}
     ];
-    client.readPropertyMultiple('127.0.0.1', requestArray, (err, response) => {
+    client.readPropertyMultiple('127.0.0.2', requestArray, (err, response) => {
       expect(err).to.equal(null);
       const object = utils.propertyFormater(response.values[0].values);
       expect(response.values[0].objectId).to.deep.equal({type: 29, instance: 31});
@@ -55,7 +55,7 @@ describe('bacnet - readPropertyMultiple integration', () => {
       client.close();
       next();
     });
-    transport.emit('message', data, '127.0.0.1');
+    transport.emit('message', data, '127.0.0.2');
   });
 
   it('should successfully decode a value object', (next) => {
@@ -65,7 +65,7 @@ describe('bacnet - readPropertyMultiple integration', () => {
     const requestArray = [
       {objectId: {type: 8, instance: 4194303}, properties: [{id: 8}]}
     ];
-    client.readPropertyMultiple('127.0.0.1', requestArray, (err, response) => {
+    client.readPropertyMultiple('127.0.0.2', requestArray, (err, response) => {
       expect(err).to.equal(null);
       expect(response.values[0].objectId).to.deep.equal({type: 19, instance: 10});
       const object = utils.propertyFormater(response.values[0].values);
@@ -107,6 +107,6 @@ describe('bacnet - readPropertyMultiple integration', () => {
       client.close();
       next();
     });
-    transport.emit('message', data, '127.0.0.1');
+    transport.emit('message', data, '127.0.0.2');
   });
 });
