@@ -8,7 +8,7 @@
 
 # node-bacnet
 
-[![nodemodbus64](images/bacnet-icon-quad64.png)](https://www.npmjs.com/~package/node-bancet)
+[![node-bacnetLogo64](images/bacnet-icon-quad64.png)](https://www.npmjs.com/package/node-bacnet)
 
 The BACnet® protocol library written in pure JavaScript.
 
