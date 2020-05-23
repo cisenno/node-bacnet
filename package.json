@@ -11,7 +11,7 @@
     "test:unit": "DEBUG=bacnet* mocha test/unit/*.spec.js",
     "test:integration": "DEBUG=bacnet* mocha test/integration/*.spec.js --timeout 5000",
     "test:compliance": "DEBUG=bacnet* mocha test/compliance/*.spec.js --timeout 5000",
-    "docs": "jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
+    "docs": "cp -r images docs && jsdoc -r -d ./docs -t node_modules/docdash ./lib ./index.js ./README.md",
     "release": "standard-version -a",
     "release:beta": "standard-version --prerelease beta",
     "release:alpha": "standard-version --prerelease alpha",
