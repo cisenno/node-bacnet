@@ -7,7 +7,7 @@ jobs:
       script:
         - "npm install coveralls"
         - "npm run lint"
-        - "npm run test"
+        - "npm run coverage"
         - "cat ./reports/coverage-test/lcov.info | ./node_modules/.bin/coveralls"
         - "npm run docs"
     - stage: compliance
