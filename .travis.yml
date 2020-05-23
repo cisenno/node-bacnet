@@ -11,6 +11,7 @@ jobs:
         - "cat ./reports/coverage/lcov.info | ./node_modules/.bin/coveralls"
         - "npm run docs"
     - stage: compliance
+      node_js: "lts/*"
       services: docker
       sudo: false
       before_install:
