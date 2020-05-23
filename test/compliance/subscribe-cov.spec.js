@@ -12,10 +12,10 @@ describe('bacnet - subscribeCov compliance', () => {
   let onClose = null;
 
   before((done) => {
-    bacnetClient = new utils.bacnetClient({apduTimeout: 1000, interface: '0.0.0.0'});
+    bacnetClient = new utils.bacnetClient({apduTimeout: utils.apduTimeout, interface: utils.clientListenerInterface});
     bacnetClient.on('message', (msg, rinfo) => {
-      console.log(msg);
-      if (rinfo) console.log(rinfo);
+      debug(msg);
+      if (rinfo) debug(rinfo);
     });
     bacnetClient.on('iAm', (device) => {
       discoveredAddress = device.header.sender;
@@ -42,11 +42,13 @@ describe('bacnet - subscribeCov compliance', () => {
 
   it('should find the device simulator device', (next) => {
     bacnetClient.on('iAm', (device) => {
-      discoveredAddress = device.header.sender;
-      expect(device.payload.deviceId).to.eql(1234);
-      expect(discoveredAddress).to.be.an('object');
-      expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        discoveredAddress = device.header.sender;
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        expect(discoveredAddress).to.be.an('object');
+        expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
+        next();
+      }
     });
     bacnetClient.whoIs();
   });

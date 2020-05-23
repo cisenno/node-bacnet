@@ -1,9 +1,14 @@
 'use strict';
 
-const EventEmitter      = require('events').EventEmitter;
-const bacnet            = require('../../');
+const coreExports = {
+  debug: require('debug')('bacnet:test:integration:debug'),
+  trace: require('debug')('bacnet:test:integration:trace'),
+  bacnetClient:  require('../../')
+};
 
-module.exports.bacnetClient = bacnet;
+module.exports = coreExports;
+
+const EventEmitter      = require('events').EventEmitter;
 
 class Transport extends EventEmitter {
   constructor() {

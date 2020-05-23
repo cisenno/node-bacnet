@@ -12,10 +12,10 @@ describe('bacnet - subscribeProperty compliance', () => {
   let onClose = null;
 
   before((done) => {
-    bacnetClient = new utils.bacnetClient({apduTimeout: 1000, interface: '0.0.0.0'});
+    bacnetClient = new utils.bacnetClient({apduTimeout: utils.apduTimeout, interface: utils.clientListenerInterface});
     bacnetClient.on('message', (msg, rinfo) => {
-      console.log(msg);
-      if (rinfo) console.log(rinfo);
+      debug(msg);
+      if (rinfo) debug(rinfo);
     });
     bacnetClient.on('iAm', (device) => {
       discoveredAddress = device.header.sender;
@@ -42,17 +42,19 @@ describe('bacnet - subscribeProperty compliance', () => {
 
   it('should find the device simulator device', (next) => {
     bacnetClient.on('iAm', (device) => {
-      discoveredAddress = device.header.sender;
-      expect(device.payload.deviceId).to.eql(1234);
-      expect(discoveredAddress).to.be.an('object');
-      expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        discoveredAddress = device.header.sender;
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        expect(discoveredAddress).to.be.an('object');
+        expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
+        next();
+      }
     });
     bacnetClient.whoIs();
   });
 
   it('subscribe property BINARY_VALUE,2 from device, expect not supported error', (next) => {
-    bacnetClient.subscribeProperty(discoveredAddress, {type: 5, instance: 2}, {id: 85, index: 4294967295}, 1000, false, false, (err) => {
+    bacnetClient.subscribeProperty(discoveredAddress, {type: 5, instance: 2}, {id: 85, index: utils.index}, 1000, false, false, (err) => {
       expect(err).to.be.ok;
       expect(err.bacnetAbortReason).to.equal(utils.bacnetClient.enum.AbortReason.OUT_OF_RESOURCES); // 9
       next();

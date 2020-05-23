@@ -20,6 +20,7 @@ Git-Flow feature brachnes would be great here to seperate and to review changes 
 ### Start
 
 ``` sh
+npm i -g npm-check-updates
 npm install
 ```
 
@@ -57,7 +58,9 @@ Running the tests and calculating the coverage can be done locally by executing:
 
 ``` sh
 npm run test
-npm run integration
+npm run coverage
+npm run test:unit
+npm run test:integration
 ```
 
 It is expected that new features or fixes do not negatively impact the test
@@ -70,14 +73,14 @@ using synthetical data, the  `compliance` test-set is using a well established
 3rd BACNET device emulator to test against. It uses the same test setup with
 [Mocha](https://mochajs.org/) and [Istanbul](https://istanbul.js.org/), but runs
 inside a Docker container, while using the [BACStack Compliance Docker](https://github.com/fh1ch/bacstack-compliance-docker)
-image to test against.
+image to test against. Compliance test could also be tested with your device on Id: 1234.
+A compliance test will not work without the docker call or a device with Id 1234.
 
 The compliance tests can be executed locally and require Docker and
 Docker-Compose. To do so, simply run:
 
 ``` sh
-docker-compose build
-docker-compose up --abort-on-container-exit --exit-code-from bacnet-client
+npm run docker
 ```
 
 ### Documentation

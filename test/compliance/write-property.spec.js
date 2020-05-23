@@ -12,10 +12,10 @@ describe('bacnet - writeProperty compliance', () => {
   let onClose = null;
 
   before((done) => {
-    bacnetClient = new utils.bacnetClient({apduTimeout: 1000, interface: '0.0.0.0'});
+    bacnetClient = new utils.bacnetClient({apduTimeout: utils.apduTimeout, interface: utils.clientListenerInterface});
     bacnetClient.on('message', (msg, rinfo) => {
-      console.log(msg);
-      if (rinfo) console.log(rinfo);
+      debug(msg);
+      if (rinfo) debug(rinfo);
     });
     bacnetClient.on('iAm', (device) => {
       discoveredAddress = device.header.sender;
@@ -42,11 +42,13 @@ describe('bacnet - writeProperty compliance', () => {
 
   it('should find the device simulator device', (next) => {
     bacnetClient.on('iAm', (device) => {
-      discoveredAddress = device.header.sender;
-      expect(device.payload.deviceId).to.eql(1234);
-      expect(discoveredAddress).to.be.an('object');
-      expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        discoveredAddress = device.header.sender;
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        expect(discoveredAddress).to.be.an('object');
+        expect(discoveredAddress.address).to.match(/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/);
+        next();
+      }
     });
     bacnetClient.whoIs();
   });
@@ -55,7 +57,7 @@ describe('bacnet - writeProperty compliance', () => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
       expect(err).to.be.not.ok;
       expect(value).to.be.an('object');
-      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index":4294967295},"values":[{"type":4,"value":0}]});
+      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index": utils.index},"values":[{"type":4,"value":0}]});
       next();
     });
   });
@@ -73,7 +75,7 @@ describe('bacnet - writeProperty compliance', () => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
       expect(err).to.be.not.ok;
       expect(value).to.be.an('object');
-      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index":4294967295},"values":[{"type":4,"value":100}]});
+      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index": utils.index},"values":[{"type":4,"value":100}]});
       next();
     });
   });

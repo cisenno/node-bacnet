@@ -10,10 +10,10 @@ describe('bacnet - whoIs compliance', () => {
   let bacnetClient;
 
   beforeEach((done) => {
-    bacnetClient = new utils.bacnetClient({apduTimeout: 1000, interface: '0.0.0.0'});
+    bacnetClient = new utils.bacnetClient({apduTimeout: utils.apduTimeout, interface: utils.clientListenerInterface});
     bacnetClient.on('message', (msg, rinfo) => {
-      console.log(msg);
-      if (rinfo) console.log(rinfo);
+      debug(msg);
+      if (rinfo) debug(rinfo);
     });
     bacnetClient.on('error', (err) => {
       console.error(err);
@@ -33,35 +33,41 @@ describe('bacnet - whoIs compliance', () => {
 
   it('should find the device simulator', (next) => {
     bacnetClient.on('iAm', (device) => {
-      expect(device.header).to.be.ok;
-      expect(device.payload).to.be.ok;
-      expect(device.payload.deviceId).to.eql(1234);
-      expect(device.payload.maxApdu).to.eql(1476);
-      expect(device.payload.segmentation).to.eql(utils.bacnetClient.enum.Segmentation.NO_SEGMENTATION);
-      expect(device.payload.vendorId).to.eql(260);
-      expect(device.header.sender).to.be.ok;
-      expect(device.header.sender).to.be.an('object');
-      expect(device.header.sender.address).to.be.an('string');
-      expect(device.header.sender.forwardedFrom).to.be.null;
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        expect(device.header).to.be.ok;
+        expect(device.payload).to.be.ok;
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        expect(device.payload.maxApdu).to.eql(utils.maxApdu);
+        expect(device.payload.segmentation).to.eql(utils.bacnetClient.enum.Segmentation.NO_SEGMENTATION);
+        expect(device.payload.vendorId).to.eql(utils.vendorId);
+        expect(device.header.sender).to.be.ok;
+        expect(device.header.sender).to.be.an('object');
+        expect(device.header.sender.address).to.be.an('string');
+        expect(device.header.sender.forwardedFrom).to.be.null;
+        next();
+      }
     });
     bacnetClient.whoIs();
   });
 
   it('should find the device simulator with provided min device ID', (next) => {
     bacnetClient.on('iAm', (device) => {
-      expect(device.payload.deviceId).to.eql(1234);
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        next();
+      }
     });
-    bacnetClient.whoIs({lowLimit: 1233});
+    bacnetClient.whoIs({lowLimit: utils.deviceUnderTest - 1});
   });
 
   it('should find the device simulator with provided min/max device ID and IP', (next) => {
     bacnetClient.on('iAm', (device) => {
-      expect(device.payload.deviceId).to.eql(1234);
-      next();
+      if(device.payload.deviceId === utils.deviceUnderTest) {
+        expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
+        next();
+      }
     });
-    bacnetClient.whoIs({lowLimit: 1233, highLimit: 1235});
+    bacnetClient.whoIs({lowLimit: utils.deviceUnderTest -1, highLimit: utils.deviceUnderTest +1});
   });
 
   it('should NOT find any device', (next) => {
@@ -73,7 +79,7 @@ describe('bacnet - whoIs compliance', () => {
       }
       next();
     });
-    bacnetClient.whoIs({lowLimit: 1235, highLimit: 1237});
+    bacnetClient.whoIs({lowLimit: utils.deviceUnderTest +1, highLimit: utils.deviceUnderTest +3});
     // ok when no result came in 4s
     let notFoundTimeout = setTimeout(() => {
       notFoundTimeout = null;

@@ -11,4 +11,4 @@ RUN npm install
 Add . .
 
 # Run compliance tests
-CMD DEBUG=bacnet* npm run compliance
+CMD DEBUG=bacnet* npm run test:compliance
