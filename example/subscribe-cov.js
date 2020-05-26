@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * This script will discover tze devices and tries to register a COV for ANALOG_INPUT 0
+ * The script works very well when the Yabe Room Simulator exe is running
+ *
+ * After 20s the subscription is cancelled by updating it with a lifetime of 1s
+ */
+
 const Bacnet = require('../index');
 
 // you need to run the Weather2 Station of the YABE BACnet package
