@@ -42,3 +42,4 @@ branches:
     - develop
     - alpha
     - beta
+    - next
