@@ -316,7 +316,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
  * @param callback
  */
 function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
-  //console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
+  console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
   if (!obj.values || !Array.isArray(obj.values)) {
     console.log('No device or invalid response');
     callback({'ERROR': 'No device or invalid response'});
@@ -338,7 +338,7 @@ function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
     if (obj.values.length === 1) {
       objDef = objDef[obj.values[0].objectId.instance];
     }
-    //console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
+    console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
     callback(objDef);
   };
 
@@ -415,7 +415,7 @@ if (process.argv.length === 3) {
   }
 }
 // create instance of Bacnet
-const bacnetClient = new Bacnet({apduTimeout: 10000, interface: '0.0.0.0'});
+const bacnetClient = new Bacnet({apduTimeout: 120000, interface: '0.0.0.0'});
 
 // emitted for each new message
 bacnetClient.on('message', (msg, rinfo) => {
