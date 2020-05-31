@@ -57,7 +57,7 @@ describe('bacnet - writeProperty compliance', () => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
       expect(err).to.be.not.ok;
       expect(value).to.be.an('object');
-      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index": utils.index},"values":[{"type":4,"value":0}]});
+      expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index': utils.index},'values':[{'type':4,'value':0}]});
       next();
     });
   });
@@ -78,7 +78,7 @@ describe('bacnet - writeProperty compliance', () => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
       expect(err).to.be.not.ok;
       expect(value).to.be.an('object');
-      expect(value).to.deep.equal({"len":14,"objectId":{"type":1,"instance":2},"property":{"id":85,"index": utils.index},"values":[{"type":4,"value":0}]});
+      expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index': utils.index},'values':[{'type':4,'value':0}]});
       next();
     });
   });

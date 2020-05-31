@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
-    "lint": "jshint lib/ test/ index.js && jscs lib/ test/ index.js",
+    "lint": "jshint lib/ test/ index.js && eslint lib/** test/** example/** index.js",
+    "lint:fix": "eslint --fix lib/** test/** example/** index.js",
+    "lint:fix:dry": "eslint --fix-dry-run lib/** test/** example/** index.js",
     "test": "npm run lint && npm run test:unit && npm run test:integration",
     "coverage": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm test",
     "test:unit": "DEBUG=bacnet* mocha test/unit/*.spec.js",
@@ -60,13 +62,14 @@
   "homepage": "https://github.com/BiancoRoyal/node-bacstack#readme",
   "dependencies": {
     "debug": "^4.1.1",
-    "iconv-lite": "^0.5.1"
+    "iconv-lite": "^0.5.1",
+    "underscore": "^1.10.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "conventional-changelog-cli": "^2.0.27",
     "docdash": "^1.2.0",
-    "jscs": "^3.0.7",
+    "eslint": "^7.1.0",
     "jsdoc": "^3.6.4",
     "jshint": "^2.11.1",
     "mocha": "^7.1.2",
