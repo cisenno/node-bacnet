@@ -55,7 +55,7 @@ describe('bacnet - subscribeProperty compliance', () => {
 
   it('subscribe property BINARY_VALUE,2 from device, expect not supported error', (next) => {
     bacnetClient.subscribeProperty(discoveredAddress, {type: 5, instance: 2}, {id: 85, index: utils.index}, 1000, false, false, (err) => {
-      expect(err).to.be.ok;
+      expect(err).to.be.an('object');
       expect(err.bacnetAbortReason).to.equal(utils.bacnetClient.enum.AbortReason.OUT_OF_RESOURCES); // 9
       next();
     });

@@ -55,7 +55,7 @@ describe('bacnet - readProperty compliance', () => {
 
   it('read property VENDOR_NAME (121) from device', (next) => {
     bacnetClient.readProperty(discoveredAddress, {type: 8, instance: utils.deviceUnderTest}, 121, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value).to.deep.equal({'len':39,'objectId':{'type':8,'instance':utils.deviceUnderTest},'property':{'id':121,'index':utils.index},'values':[{'type':7,'value':'BACnet Stack at SourceForge','encoding':0}]});
       next();
@@ -64,7 +64,7 @@ describe('bacnet - readProperty compliance', () => {
 
   it('read property PRESENT_VALUE from analog-output,2 from device', (next) => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index':utils.index},'values':[{'type':4,'value':0}]});
       next();

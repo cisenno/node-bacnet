@@ -55,7 +55,7 @@ describe('bacnet - subscribeCov compliance', () => {
 
   it('subscribeCov property BINARY_VALUE,2 from device, expect error OPTIONAL_FUNCTIONALITY_NOT_SUPPORTED', (next) => {
     bacnetClient.subscribeCov(discoveredAddress, {type: 5, instance: 2}, 107, false, false, 0, (err) => {
-      expect(err).to.be.ok;
+      expect(err).to.be.an('object');
       expect(err.bacnetErrorClass).to.equal(utils.bacnetClient.enum.ErrorClass.OBJECT); // 1
       expect(err.bacnetErrorCode).to.equal(utils.bacnetClient.enum.ErrorCode.OPTIONAL_FUNCTIONALITY_NOT_SUPPORTED); // 45
       next();

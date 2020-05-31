@@ -60,7 +60,7 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
@@ -78,7 +78,7 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
@@ -96,7 +96,7 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress.address, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
@@ -114,7 +114,7 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
@@ -133,7 +133,7 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(null, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.be.undefined;
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
