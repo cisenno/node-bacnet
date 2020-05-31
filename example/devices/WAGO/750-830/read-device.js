@@ -453,8 +453,8 @@ bacnetClient.on('iAm', (device) => {
   knownDevices.push(deviceId);
 
   const requestArray = [{
-    objectId: {type: 8, instance: deviceId},
-    properties: [{id: 8}]
+    objectId: {type: Bacnet.enum.ObjectType.DEVICE, instance: deviceId},
+    properties: [{id: Bacnet.enum.PropertyIdentifier.ALL}]
   }];
   bacnetClient.readPropertyMultiple(address, requestArray, (err, value) => {
     if (err) {
