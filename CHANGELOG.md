@@ -1,8 +1,59 @@
-# Changelog
+## <small>0.1.2-beta.2 (2020-05-23)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore: badges and Logo ([f9adb45](https://github.com/BiancoRoyal/node-bacstack/commit/f9adb45))
+* chore: badges and Logo ([0242d0f](https://github.com/BiancoRoyal/node-bacstack/commit/0242d0f))
+* chore: changelog rewrite and no commit lint anymore ([227e2af](https://github.com/BiancoRoyal/node-bacstack/commit/227e2af))
+* chore: readme ([e9c632f](https://github.com/BiancoRoyal/node-bacstack/commit/e9c632f))
+* chore: Update CONTRIBUTING.md ([327f1a9](https://github.com/BiancoRoyal/node-bacstack/commit/327f1a9))
+* chore: Update LICENSE.md ([59ee1ec](https://github.com/BiancoRoyal/node-bacstack/commit/59ee1ec))
+* chore(release): 0.1.2-beta.2 ([d29b978](https://github.com/BiancoRoyal/node-bacstack/commit/d29b978))
+* chore(release): update changelog ([3aba95e](https://github.com/BiancoRoyal/node-bacstack/commit/3aba95e))
+* chore(release): update version ([abcea03](https://github.com/BiancoRoyal/node-bacstack/commit/abcea03))
+* chore(release): update version ([9f83e2a](https://github.com/BiancoRoyal/node-bacstack/commit/9f83e2a))
+* docs: copy images to docs ([7533ce9](https://github.com/BiancoRoyal/node-bacstack/commit/7533ce9))
+* docs: readme update ([47b2042](https://github.com/BiancoRoyal/node-bacstack/commit/47b2042))
+* test: debug in tests and contribution docs update ([b8f7b3f](https://github.com/BiancoRoyal/node-bacstack/commit/b8f7b3f))
+* test: pre release testing ([18746d9](https://github.com/BiancoRoyal/node-bacstack/commit/18746d9))
+* test: trace callback ([6c6e63c](https://github.com/BiancoRoyal/node-bacstack/commit/6c6e63c))
+* test: unknown IP for testing integration with TIMEOUT ([fc709de](https://github.com/BiancoRoyal/node-bacstack/commit/fc709de))
+* test(ci): just some branches to build ([a195f8f](https://github.com/BiancoRoyal/node-bacstack/commit/a195f8f))
+* test(compliance): add some more compliance tests ([eb137cb](https://github.com/BiancoRoyal/node-bacstack/commit/eb137cb))
+* test(compliance): output debug log when running tests ([0b6ef0f](https://github.com/BiancoRoyal/node-bacstack/commit/0b6ef0f))
+* test(coverage): fix for coverage ([c3364b6](https://github.com/BiancoRoyal/node-bacstack/commit/c3364b6))
+* test(debug): travis compliance difference ([21a80c5](https://github.com/BiancoRoyal/node-bacstack/commit/21a80c5))
+* test(scripts): more debug on test ([cecb8ca](https://github.com/BiancoRoyal/node-bacstack/commit/cecb8ca))
+* test(travis): build with docker for compliance ([c2f3171](https://github.com/BiancoRoyal/node-bacstack/commit/c2f3171))
+* test(travis): docker is in the script ([2e7b308](https://github.com/BiancoRoyal/node-bacstack/commit/2e7b308))
+* test(travis): more tracing on ci ([7ae680f](https://github.com/BiancoRoyal/node-bacstack/commit/7ae680f))
+* fix: node lts in all stages on travis ([ce84337](https://github.com/BiancoRoyal/node-bacstack/commit/ce84337))
+* fix: skip localhost requests ([54d4b27](https://github.com/BiancoRoyal/node-bacstack/commit/54d4b27))
+* fix(build): travis ipv4 with docker ([af67446](https://github.com/BiancoRoyal/node-bacstack/commit/af67446))
+* fix(bvlc): all constants on file level should be written uppercase ([54e52f5](https://github.com/BiancoRoyal/node-bacstack/commit/54e52f5))
+* fix(client): correct the whoIs parameters ([de5f955](https://github.com/BiancoRoyal/node-bacstack/commit/de5f955))
+* fix(client): correctly check for event listeners for incoming service requests and events ([c217c34](https://github.com/BiancoRoyal/node-bacstack/commit/c217c34))
+* fix(client): correctly send unicast if an IP is provided as string as receiver, fixes https://github ([d25254c](https://github.com/BiancoRoyal/node-bacstack/commit/d25254c))
+* fix(npdu): all constants on file level should be written uppercase ([39b1b3a](https://github.com/BiancoRoyal/node-bacstack/commit/39b1b3a))
+* fix(test): coverage folder ([4a2e7ce](https://github.com/BiancoRoyal/node-bacstack/commit/4a2e7ce))
+* fix(transport): all constants on file level should be written uppercase ([e39c916](https://github.com/BiancoRoyal/node-bacstack/commit/e39c916))
+* chore:Update CONTRIBUTING.md ([dbb8122](https://github.com/BiancoRoyal/node-bacstack/commit/dbb8122))
+* Update CONTRIBUTING.md ([2cb25be](https://github.com/BiancoRoyal/node-bacstack/commit/2cb25be))
+* Update CONTRIBUTING.md ([af20c0c](https://github.com/BiancoRoyal/node-bacstack/commit/af20c0c))
+* Update LICENSE.md ([08c59f4](https://github.com/BiancoRoyal/node-bacstack/commit/08c59f4))
+* feat(client): add a client "listening" event which is fired once the UDP server is listening for mes ([d860966](https://github.com/BiancoRoyal/node-bacstack/commit/d860966))
+* feat(client): add some more debug messages ([7593d2a](https://github.com/BiancoRoyal/node-bacstack/commit/7593d2a))
+* feat(client): also provide information like erroClass, errorCode and abortReason in the returned err ([b5a2490](https://github.com/BiancoRoyal/node-bacstack/commit/b5a2490))
+* feat(client): structure debug logging into "client", "transport" and "trace" scopes to have more con ([18717f6](https://github.com/BiancoRoyal/node-bacstack/commit/18717f6))
+* feat(examples): add first example scripts ([7888740](https://github.com/BiancoRoyal/node-bacstack/commit/7888740))
+* feat(transport): remember last sent messages to detect on broadcast cases if we receive our own mess ([0fd4f2b](https://github.com/BiancoRoyal/node-bacstack/commit/0fd4f2b))
+* feat(transport): structure debug logging into "client", "transport" and "trace" scopes to have more  ([ada712e](https://github.com/BiancoRoyal/node-bacstack/commit/ada712e))
+* deps(package): update package deps ([396e538](https://github.com/BiancoRoyal/node-bacstack/commit/396e538))
+* deps(package): update package deps ([d7b78ab](https://github.com/BiancoRoyal/node-bacstack/commit/d7b78ab))
 
-### [0.1.2-beta.2](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.1...v0.1.2-beta.2) (2020-05-23)
+
+### BREAKING CHANGE
+
+* Only the new options-object style is supported now to provide lower and upper deviceId Limits!
+
 
 ## <small>0.1.1-beta.1 (2020-05-18)</small>
 
@@ -363,3 +414,6 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+
