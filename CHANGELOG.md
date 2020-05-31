@@ -1,3 +1,20 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.2-beta.3](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.2...v0.1.2-beta.3) (2020-05-31)
+
+
+### Features
+
+* **examples:** add enhanced example scripts ([54bf2c9](https://github.com/BiancoRoyal/node-bacstack/commit/54bf2c96b1b88c72d0d7b9ef37219ffa43fbb51a))
+
+
+### Bug Fixes
+
+* **client:** make sure the header is set to handle segment acks; fixes segmentation ([3b5a5cf](https://github.com/BiancoRoyal/node-bacstack/commit/3b5a5cff0f417bb750efc1911f19b5f1fbe0cad6))
+* **transfort:** do not print infos to console directly ([164a54c](https://github.com/BiancoRoyal/node-bacstack/commit/164a54c150a10aec4f616f11be98d82869c50823))
+
 ## <small>0.1.2-beta.2 (2020-05-23)</small>
 
 * chore: badges and Logo ([f9adb45](https://github.com/BiancoRoyal/node-bacstack/commit/f9adb45))
@@ -414,6 +431,3 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
-
-
-
