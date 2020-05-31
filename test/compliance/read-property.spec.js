@@ -6,7 +6,7 @@ const utils = require('./utils');
 // you need to have this run against the official backstack c
 // demo device started as deviceId 1234
 // use "npm run docker" to execute this
-describe('bacnet - readProperty compliance', () => {
+describe('bacnet - read property compliance', () => {
   let bacnetClient;
   let discoveredAddress;
   let onClose = null;
@@ -55,7 +55,7 @@ describe('bacnet - readProperty compliance', () => {
 
   it('read property VENDOR_NAME (121) from device', (next) => {
     bacnetClient.readProperty(discoveredAddress, {type: 8, instance: utils.deviceUnderTest}, 121, (err, value) => {
-      expect(err).to.be.undefined;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value).to.deep.equal({'len':39,'objectId':{'type':8,'instance':utils.deviceUnderTest},'property':{'id':121,'index':utils.index},'values':[{'type':7,'value':'BACnet Stack at SourceForge','encoding':0}]});
       next();
@@ -64,7 +64,7 @@ describe('bacnet - readProperty compliance', () => {
 
   it('read property PRESENT_VALUE from analog-output,2 from device', (next) => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
-      expect(err).to.be.undefined;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index':utils.index},'values':[{'type':4,'value':0}]});
       next();

@@ -11,4 +11,4 @@ RUN npm install && npm i --only=dev
 COPY . .
 
 # Run compliance tests
-CMD DEBUG=bacnet* npm run test:compliance
+CMD DEBUG=bacnet* npm run coverage:all

@@ -34,13 +34,13 @@ describe('bacnet - whoIs compliance', () => {
   it('should find the device simulator', (next) => {
     bacnetClient.on('iAm', (device) => {
       if(device.payload.deviceId === utils.deviceUnderTest) {
-        expect(device.header).isDefined();
-        expect(device.payload).isDefined();
+        expect(device.header).to.be.an('object');
+        expect(device.payload).to.be.an('object');
         expect(device.payload.deviceId).to.eql(utils.deviceUnderTest);
         expect(device.payload.maxApdu).to.eql(utils.maxApdu);
         expect(device.payload.segmentation).to.eql(utils.bacnetClient.enum.Segmentation.NO_SEGMENTATION);
         expect(device.payload.vendorId).to.eql(utils.vendorId);
-        expect(device.header.sender).isDefined();
+        expect(device.header.sender).to.be.an('object');
         expect(device.header.sender).to.be.an('object');
         expect(device.header.sender.address).to.be.an('string');
         expect(device.header.sender.forwardedFrom).to.be.null;
