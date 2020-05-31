@@ -65,7 +65,7 @@ describe('bacnet - writeProperty compliance', () => {
   it('write property using Multiple PRESENT_VALUE from analog-output,2 from device', (next) => {
     const values = [
       {objectId: {type: 1, instance: 2}, values: [
-          {property: {id: 85}, value: [{type: utils.bacnetClient.enum.ApplicationTags.REAL, value: 100}], priority: 8}
+          {property: {id: 85}, value: [{type: utils.bacnetClient.enum.ApplicationTag.REAL, value: 100}], priority: 8}
         ]}
     ];
     bacnetClient.writePropertyMultiple(discoveredAddress, values, (err) => {

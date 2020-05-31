@@ -12,11 +12,11 @@ describe('bacnet - confirmedCOVNotification integration', () => {
         [
           {
             property: {id: 85},
-            value: [{type: baEnum.ApplicationTags.REAL, value: 12.3}]
+            value: [{type: baEnum.ApplicationTag.REAL, value: 12.3}]
           },
           {
             property: {id: 111},
-            value: [{type: baEnum.ApplicationTags.BIT_STRING, value: 0xFFFF}]
+            value: [{type: baEnum.ApplicationTag.BIT_STRING, value: 0xFFFF}]
           }
         ],
         (err, value) => {

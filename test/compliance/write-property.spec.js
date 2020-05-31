@@ -64,7 +64,7 @@ describe('bacnet - writeProperty compliance', () => {
 
   it('write property PRESENT_VALUE from analog-output,2 from device', (next) => {
     bacnetClient.writeProperty(discoveredAddress, {type: 1, instance: 2}, 85, [
-      {type: utils.bacnetClient.enum.ApplicationTags.REAL, value: 100}
+      {type: utils.bacnetClient.enum.ApplicationTag.REAL, value: 100}
     ], (err) => {
       expect(err).to.be.not.ok;
       next();

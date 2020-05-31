@@ -7,6 +7,7 @@
  */
 
 const Bacnet = require('../../../../index');
+const bacnetEnum = require('../../../../lib/enum');
 
 // create instance of Bacnet
 const bacnetClient = new Bacnet({apduTimeout: 10000, interface: '0.0.0.0'});
@@ -42,20 +43,24 @@ bacnetClient.on('iAm', (device) => {
   const deviceId = device.payload.deviceId;
   if (knownDevices.includes(deviceId)) return;
 
-  bacnetClient.readProperty(address, {type: 8, instance: deviceId}, 8, (err, value) => {
-    if (err) {
-      console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
-      console.log(err);
-    } else {
-      if (value.values[0].value) {
-        console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address) + ': ' + value.values[0].value);
-      } else {
-        console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
-        console.log('value 77: ', JSON.stringify(value));
-      }
-      console.log();
-      console.log();
-    }
-  });
+  bacnetClient.readProperty(address,
+    { type: bacnetEnum.ObjectType.DEVICE, instance: deviceId },
+    bacnetEnum.PropertyIdentifier.DEVICE_ADDRESS_BINDING,
+    (err, value) => {
+              if (err) {
+                console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
+                console.log(err);
+              } else {
+                if (value.values && value.values.length && value.values[0].value) {
+                  console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address) + ': ' + value.values[0].value);
+                } else {
+                  console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
+                  console.log('value from property: ', JSON.stringify(value));
+                }
+                console.log();
+              }
+            }
+  );
+
   knownDevices.push(deviceId);
 });

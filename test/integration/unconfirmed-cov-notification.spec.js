@@ -11,12 +11,12 @@ describe('bacnet - unconfirmedCOVNotification integration', () => {
         '127.0.0.2', 3, 433, {type: 2, instance: 122}, 120, [
           {
             property: {id: 85},
-            value: [{type: baEnum.ApplicationTags.REAL, value: 12.3}]
+            value: [{type: baEnum.ApplicationTag.REAL, value: 12.3}]
           },
           {
             property: {id: 111},
             value:
-                [{type: baEnum.ApplicationTags.BIT_STRING, value: 0xFFFF}]
+                [{type: baEnum.ApplicationTag.BIT_STRING, value: 0xFFFF}]
           }
         ]);
     client.close();

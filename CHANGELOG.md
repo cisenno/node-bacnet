@@ -1,19 +1,21 @@
-# Changelog
+## <small>0.1.2-beta.3 (2020-05-31)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore: changelog ([3c082f7](https://github.com/BiancoRoyal/node-bacstack/commit/3c082f7))
+* chore: next to release a next on npm ([70549ab](https://github.com/BiancoRoyal/node-bacstack/commit/70549ab))
+* chore(lint): create eslint from jscs ([0ec3735](https://github.com/BiancoRoyal/node-bacstack/commit/0ec3735))
+* chore(release): 0.1.2-beta.3 ([1c74ff2](https://github.com/BiancoRoyal/node-bacstack/commit/1c74ff2))
+* feat(tests) Add test for writePropertyMultiple - but bacnet stack is not supporting it :-( ([b717d5c](https://github.com/BiancoRoyal/node-bacstack/commit/b717d5c))
+* fix(asn1) make sure code do not break when valueLength is 0 ( had such a case while testing writePro ([55f9ff4](https://github.com/BiancoRoyal/node-bacstack/commit/55f9ff4))
+* fix(client) Make sure that arrayIndex === 0 for readProperty is respected and not set to "ALL" ([51bb721](https://github.com/BiancoRoyal/node-bacstack/commit/51bb721))
+* fix(general) Address code style comments ([7ac9262](https://github.com/BiancoRoyal/node-bacstack/commit/7ac9262))
+* fix(general) Fix code style ([b7912d5](https://github.com/BiancoRoyal/node-bacstack/commit/b7912d5))
+* fix(general) Fix linter error ([be492e1](https://github.com/BiancoRoyal/node-bacstack/commit/be492e1))
+* fix(transport) Make sure the reuseAddr flag is also used ([101847a](https://github.com/BiancoRoyal/node-bacstack/commit/101847a))
+* feat(examples): add enhanced example scripts ([54bf2c9](https://github.com/BiancoRoyal/node-bacstack/commit/54bf2c9))
+* fix(client): make sure the header is set to handle segment acks; fixes segmentation ([3b5a5cf](https://github.com/BiancoRoyal/node-bacstack/commit/3b5a5cf))
+* fix(transfort): do not print infos to console directly ([164a54c](https://github.com/BiancoRoyal/node-bacstack/commit/164a54c))
 
-### [0.1.2-beta.3](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.2...v0.1.2-beta.3) (2020-05-31)
 
-
-### Features
-
-* **examples:** add enhanced example scripts ([54bf2c9](https://github.com/BiancoRoyal/node-bacstack/commit/54bf2c96b1b88c72d0d7b9ef37219ffa43fbb51a))
-
-
-### Bug Fixes
-
-* **client:** make sure the header is set to handle segment acks; fixes segmentation ([3b5a5cf](https://github.com/BiancoRoyal/node-bacstack/commit/3b5a5cff0f417bb750efc1911f19b5f1fbe0cad6))
-* **transfort:** do not print infos to console directly ([164a54c](https://github.com/BiancoRoyal/node-bacstack/commit/164a54c150a10aec4f616f11be98d82869c50823))
 
 ## <small>0.1.2-beta.2 (2020-05-23)</small>
 
@@ -431,3 +433,6 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+
