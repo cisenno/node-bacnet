@@ -51,9 +51,8 @@ bacnetClient.on('iAm', (device) => {
         console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address) + ': ' + value.values[0].value);
       } else {
         console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
-        console.log('value 77: ', JSON.stringify(value));
+        console.log('value: ', JSON.stringify(value));
       }
-      console.log();
       console.log();
     }
   });

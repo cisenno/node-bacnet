@@ -8,6 +8,7 @@
  */
 
 const Bacnet = require('../index');
+const usc = require('underscore');
 const process = require('process');
 
 // Map the Property types to their enums/bitstrings
@@ -74,6 +75,38 @@ ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LIFE_SAFETY
 ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTROL] = {};
 ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTROL][Bacnet.enum.PropertyIdentifier.PRESENT_VALUE] = Bacnet.enum.ShedState;
 
+const proSubSet = [
+  Bacnet.enum.PropertyIdentifier.OBJECT_IDENTIFIER,
+  Bacnet.enum.PropertyIdentifier.OBJECT_NAME,
+  Bacnet.enum.PropertyIdentifier.DESCRIPTION,
+  Bacnet.enum.PropertyIdentifier.SYSTEM_STATUS,
+  Bacnet.enum.PropertyIdentifier.VENDOR_NAME,
+  Bacnet.enum.PropertyIdentifier.VENDOR_IDENTIFIER,
+  Bacnet.enum.PropertyIdentifier.MODEL_NAME,
+  Bacnet.enum.PropertyIdentifier.FIRMWARE_REVISION,
+  Bacnet.enum.PropertyIdentifier.APPLICATION_SOFTWARE_VERSION,
+  Bacnet.enum.PropertyIdentifier.LOCATION,
+  Bacnet.enum.PropertyIdentifier.LOCAL_DATE,
+  Bacnet.enum.PropertyIdentifier.LOCAL_TIME,
+  Bacnet.enum.PropertyIdentifier.UTC_OFFSET,
+  Bacnet.enum.PropertyIdentifier.DAYLIGHT_SAVINGS_STATUS,
+  Bacnet.enum.PropertyIdentifier.PROTOCOL_VERSION,
+  Bacnet.enum.PropertyIdentifier.PROTOCOL_REVISION,
+  Bacnet.enum.PropertyIdentifier.PROTOCOL_SERVICES_SUPPORTED,
+  Bacnet.enum.PropertyIdentifier.PROTOCOL_OBJECT_TYPES_SUPPORTED,
+  Bacnet.enum.PropertyIdentifier.OBJECT_LIST,
+  Bacnet.enum.PropertyIdentifier.MAX_APDU_LENGTH_ACCEPTED,
+  Bacnet.enum.PropertyIdentifier.SEGMENTATION_SUPPORTED,
+  Bacnet.enum.PropertyIdentifier.APDU_TIMEOUT,
+  Bacnet.enum.PropertyIdentifier.NUMBER_OF_APDU_RETRIES,
+  Bacnet.enum.PropertyIdentifier.DEVICE_ADDRESS_BINDING,
+  Bacnet.enum.PropertyIdentifier.DATABASE_REVISION,
+  Bacnet.enum.PropertyIdentifier.MAX_INFO_FRAMES,
+  Bacnet.enum.PropertyIdentifier.MAX_MASTER,
+  Bacnet.enum.PropertyIdentifier.ACTIVE_COV_SUBSCRIPTIONS,
+  Bacnet.enum.PropertyIdentifier.ACTIVE_COV_MULTIPLE_SUBSCRIPTIONS
+];
+
 /**
  * Retrieve all properties manually because ReadPropertyMultiple is not available
  * @param address
@@ -85,37 +118,6 @@ ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTRO
  */
 function getAllPropertiesManually(address, objectId, callback, propList, result) {
   if (!propList) {
-    /*propList = [
-      Bacnet.enum.PropertyIdentifier.OBJECT_IDENTIFIER,
-      Bacnet.enum.PropertyIdentifier.OBJECT_NAME,
-      Bacnet.enum.PropertyIdentifier.DESCRIPTION,
-      Bacnet.enum.PropertyIdentifier.SYSTEM_STATUS,
-      Bacnet.enum.PropertyIdentifier.VENDOR_NAME,
-      Bacnet.enum.PropertyIdentifier.VENDOR_IDENTIFIER,
-      Bacnet.enum.PropertyIdentifier.MODEL_NAME,
-      Bacnet.enum.PropertyIdentifier.FIRMWARE_REVISION,
-      Bacnet.enum.PropertyIdentifier.APPLICATION_SOFTWARE_VERSION,
-      Bacnet.enum.PropertyIdentifier.LOCATION,
-      Bacnet.enum.PropertyIdentifier.LOCAL_DATE,
-      Bacnet.enum.PropertyIdentifier.LOCAL_TIME,
-      Bacnet.enum.PropertyIdentifier.UTC_OFFSET,
-      Bacnet.enum.PropertyIdentifier.DAYLIGHT_SAVINGS_STATUS,
-      Bacnet.enum.PropertyIdentifier.PROTOCOL_VERSION,
-      Bacnet.enum.PropertyIdentifier.PROTOCOL_REVISION,
-      Bacnet.enum.PropertyIdentifier.PROTOCOL_SERVICES_SUPPORTED,
-      Bacnet.enum.PropertyIdentifier.PROTOCOL_OBJECT_TYPES_SUPPORTED,
-      Bacnet.enum.PropertyIdentifier.OBJECT_LIST,
-      Bacnet.enum.PropertyIdentifier.MAX_APDU_LENGTH_ACCEPTED,
-      Bacnet.enum.PropertyIdentifier.SEGMENTATION_SUPPORTED,
-      Bacnet.enum.PropertyIdentifier.APDU_TIMEOUT,
-      Bacnet.enum.PropertyIdentifier.NUMBER_OF_APDU_RETRIES,
-      Bacnet.enum.PropertyIdentifier.DEVICE_ADDRESS_BINDING,
-      Bacnet.enum.PropertyIdentifier.DATABASE_REVISION,
-      Bacnet.enum.PropertyIdentifier.MAX_INFO_FRAMES,
-      Bacnet.enum.PropertyIdentifier.MAX_MASTER,
-      Bacnet.enum.PropertyIdentifier.ACTIVE_COV_SUBSCRIPTIONS,
-      Bacnet.enum.PropertyIdentifier.ACTIVE_COV_MULTIPLE_SUBSCRIPTIONS
-    ];*/
     propList = Object.values(Bacnet.enum.PropertyIdentifier);
   }
   if (!result) {
@@ -137,12 +139,12 @@ function getAllPropertiesManually(address, objectId, callback, propList, result)
   // Read only object-list property
   bacnetClient.readProperty(address, objectId, prop, (err, value) => {
     if (!err) {
-      //console.log('value ' + prop + ': ', JSON.stringify(value));
+      console.log('value ' + prop + ': ', JSON.stringify(value));
       const objRes = value.property;
       objRes.value = value.values;
       result.push(objRes);
     } else {
-      //console.log('Device do not contain object ' + Bacnet.enum.getEnumName(Bacnet.enum.PropertyIdentifier, prop));
+      // console.log('Device do not contain object ' + Bacnet.enum.getEnumName(Bacnet.enum.PropertyIdentifier, prop));
     }
     getAllPropertiesManually(address, objectId, callback, propList, result);
   });
@@ -271,7 +273,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
         } else {
           getAllPropertiesManually(address, value.value, result => {
             parseDeviceObject(address, result, value.value, false, callback);
-          });
+          }, proSubSet);
           return;
         }
         break;
@@ -316,7 +318,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
  * @param callback
  */
 function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
-  //console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
+  console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
   if (!obj.values || !Array.isArray(obj.values)) {
     console.log('No device or invalid response');
     callback({'ERROR': 'No device or invalid response'});
@@ -338,7 +340,7 @@ function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
     if (obj.values.length === 1) {
       objDef = objDef[obj.values[0].objectId.instance];
     }
-    //console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
+    console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
     callback(objDef);
   };
 
@@ -415,7 +417,7 @@ if (process.argv.length === 3) {
   }
 }
 // create instance of Bacnet
-const bacnetClient = new Bacnet({apduTimeout: 10000, interface: '0.0.0.0'});
+const bacnetClient = new Bacnet({apduTimeout: 4000, interface: '0.0.0.0'});
 
 // emitted for each new message
 bacnetClient.on('message', (msg, rinfo) => {
@@ -455,13 +457,21 @@ bacnetClient.on('iAm', (device) => {
   const requestArray = [{
     objectId: {type: 8, instance: deviceId},
     properties: [{id: 8}]
-  }];
+    },
+    {
+      objectId: {type: 8, instance: deviceId},
+      properties: [{id: 77}]
+    }
+  ];
+
   bacnetClient.readPropertyMultiple(address, requestArray, (err, value) => {
     if (err) {
+      console.log(err.message);
       getAllPropertiesManually(address, {type: 8, instance: deviceId}, result => {
         parseDeviceObject(address, result, {type: 8, instance: deviceId}, false, res => printResultObject(deviceId, res));
       });
     } else {
+      console.log('multiple read done');
       parseDeviceObject(address, value, {type: 8, instance: deviceId}, true, res => printResultObject(deviceId, res));
     }
   });
