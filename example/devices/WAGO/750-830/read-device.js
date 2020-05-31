@@ -206,30 +206,30 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
   let resValue = null;
   if (value && value.type && value.value !== null && value.value !== undefined) {
     switch (value.type) {
-      case Bacnet.enum.ApplicationTags.NULL:
+      case Bacnet.enum.ApplicationTag.NULL:
         // should be null already, but set again
         resValue = null;
         break;
-      case Bacnet.enum.ApplicationTags.BOOLEAN:
+      case Bacnet.enum.ApplicationTag.BOOLEAN:
         // convert number to a real boolean
         resValue = !!value.value;
         break;
-      case Bacnet.enum.ApplicationTags.UNSIGNED_INTEGER:
-      case Bacnet.enum.ApplicationTags.SIGNED_INTEGER:
-      case Bacnet.enum.ApplicationTags.REAL:
-      case Bacnet.enum.ApplicationTags.DOUBLE:
-      case Bacnet.enum.ApplicationTags.CHARACTER_STRING:
+      case Bacnet.enum.ApplicationTag.UNSIGNED_INTEGER:
+      case Bacnet.enum.ApplicationTag.SIGNED_INTEGER:
+      case Bacnet.enum.ApplicationTag.REAL:
+      case Bacnet.enum.ApplicationTag.DOUBLE:
+      case Bacnet.enum.ApplicationTag.CHARACTER_STRING:
         // datatype should be correct already
         resValue = value.value;
         break;
-      case Bacnet.enum.ApplicationTags.DATE:
-      case Bacnet.enum.ApplicationTags.TIME:
-      case Bacnet.enum.ApplicationTags.TIMESTAMP:
+      case Bacnet.enum.ApplicationTag.DATE:
+      case Bacnet.enum.ApplicationTag.TIME:
+      case Bacnet.enum.ApplicationTag.TIMESTAMP:
         // datatype should be Date too
         // Javascript do not have date/timestamp only
         resValue = value.value;
         break;
-      case Bacnet.enum.ApplicationTags.BIT_STRING:
+      case Bacnet.enum.ApplicationTag.BIT_STRING:
         // handle bitstrings specific and more generic
         if (ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType] && ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType][objId]) {
           resValue = handleBitString(value.value.value, value.value.bitsUsed, ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType][objId]);
@@ -242,7 +242,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
           resValue = value.value;
         }
         break;
-      case Bacnet.enum.ApplicationTags.ENUMERATED:
+      case Bacnet.enum.ApplicationTag.ENUMERATED:
         // handle enumerations specific and more generic
         if (ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType] && ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType][objId]) {
           resValue = Bacnet.enum.getEnumName(ObjectTypeSpecificPropertyIdentifierToEnumMap[parentType][objId], value.value);
@@ -253,7 +253,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
           resValue = value.value;
         }
         break;
-      case Bacnet.enum.ApplicationTags.OBJECTIDENTIFIER:
+      case Bacnet.enum.ApplicationTag.OBJECTIDENTIFIER:
         // Look up object identifiers
         // Some object identifiers should not be looked up because we end in loops else
         if (objId === Bacnet.enum.PropertyIdentifier.OBJECT_IDENTIFIER || objId === Bacnet.enum.PropertyIdentifier.STRUCTURED_OBJECT_LIST || objId === Bacnet.enum.PropertyIdentifier.SUBORDINATE_LIST) {
@@ -275,27 +275,27 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
           return;
         }
         break;
-      case Bacnet.enum.ApplicationTags.OCTET_STRING:
+      case Bacnet.enum.ApplicationTag.OCTET_STRING:
         // It is kind of binary data??
         resValue = value.value;
         break;
-      case Bacnet.enum.ApplicationTags.ERROR:
+      case Bacnet.enum.ApplicationTag.ERROR:
         // lookup error class and code
         resValue = {
           errorClass: Bacnet.enum.getEnumName(Bacnet.enum.ErrorClass, value.value.errorClass),
           errorCode: Bacnet.enum.getEnumName(Bacnet.enum.ErrorCode, value.value.errorCode)
         };
         break;
-      case Bacnet.enum.ApplicationTags.OBJECT_PROPERTY_REFERENCE:
-      case Bacnet.enum.ApplicationTags.DEVICE_OBJECT_PROPERTY_REFERENCE:
-      case Bacnet.enum.ApplicationTags.DEVICE_OBJECT_REFERENCE:
-      case Bacnet.enum.ApplicationTags.READ_ACCESS_SPECIFICATION: //???
+      case Bacnet.enum.ApplicationTag.OBJECT_PROPERTY_REFERENCE:
+      case Bacnet.enum.ApplicationTag.DEVICE_OBJECT_PROPERTY_REFERENCE:
+      case Bacnet.enum.ApplicationTag.DEVICE_OBJECT_REFERENCE:
+      case Bacnet.enum.ApplicationTag.READ_ACCESS_SPECIFICATION: //???
         resValue = value.value;
         break;
-      case Bacnet.enum.ApplicationTags.CONTEXT_SPECIFIC_DECODED:
+      case Bacnet.enum.ApplicationTag.CONTEXT_SPECIFIC_DECODED:
         parseValue(address, objId, parentType, value.value, supportsMultiple, callback);
         return;
-      case Bacnet.enum.ApplicationTags.READ_ACCESS_RESULT: // ????
+      case Bacnet.enum.ApplicationTag.READ_ACCESS_RESULT: // ????
         resValue = value.value;
         break;
       default:
@@ -459,11 +459,11 @@ bacnetClient.on('iAm', (device) => {
   bacnetClient.readPropertyMultiple(address, requestArray, (err, value) => {
     if (err) {
       console.log(err.message);
-      getAllPropertiesManually(address, {type: 8, instance: deviceId}, result => {
-        parseDeviceObject(address, result, {type: 8, instance: deviceId}, false, res => printResultObject(deviceId, res));
+      getAllPropertiesManually(address, {type: Bacnet.enum.ObjectType.DEVICE, instance: deviceId}, result => {
+        parseDeviceObject(address, result, {type: Bacnet.enum.ObjectType.DEVICE, instance: deviceId}, false, res => printResultObject(deviceId, res));
       });
     } else {
-      parseDeviceObject(address, value, {type: 8, instance: deviceId}, true, res => printResultObject(deviceId, res));
+      parseDeviceObject(address, value, {type: Bacnet.enum.ObjectType.DEVICE, instance: deviceId}, true, res => printResultObject(deviceId, res));
     }
   });
 
