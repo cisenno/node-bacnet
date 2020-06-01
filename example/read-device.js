@@ -76,8 +76,17 @@ ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTRO
 ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTROL][Bacnet.enum.PropertyIdentifier.PRESENT_VALUE] = Bacnet.enum.ShedState;
 
 const proSubSet = [
+  /* normally supported from all devices */
   Bacnet.enum.PropertyIdentifier.OBJECT_IDENTIFIER,
   Bacnet.enum.PropertyIdentifier.OBJECT_NAME,
+  Bacnet.enum.PropertyIdentifier.OBJECT_TYPE,
+  Bacnet.enum.PropertyIdentifier.PRESENT_VALUE,
+  Bacnet.enum.PropertyIdentifier.STATUS_FLAGS,
+  Bacnet.enum.PropertyIdentifier.EVENT_STATE,
+  Bacnet.enum.PropertyIdentifier.RELIABILITY,
+  Bacnet.enum.PropertyIdentifier.OUT_OF_SERVICE,
+  Bacnet.enum.PropertyIdentifier.UNITS,
+  /* other properties */
   Bacnet.enum.PropertyIdentifier.DESCRIPTION,
   Bacnet.enum.PropertyIdentifier.SYSTEM_STATUS,
   Bacnet.enum.PropertyIdentifier.VENDOR_NAME,
@@ -454,13 +463,14 @@ bacnetClient.on('iAm', (device) => {
   console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
   knownDevices.push(deviceId);
 
+  const propertyList = [];
+  proSubSet.forEach(item => {
+    propertyList.push({id: item});
+  });
+
   const requestArray = [{
     objectId: {type: 8, instance: deviceId},
-    properties: [{id: 8}]
-    },
-    {
-      objectId: {type: 8, instance: deviceId},
-      properties: [{id: 77}]
+    properties: propertyList
     }
   ];
 
