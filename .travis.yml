@@ -27,11 +27,13 @@ jobs:
       script:
         - "npm run docs"
       deploy:
-        if: branch = master
         provider: pages
+        on:
+          branch: master
         local_dir: ./docs
         github_token: $GITHUB_API_KEY
         skip_cleanup: true
+
 cache:
   directories:
     - "node_modules"
