@@ -8,7 +8,6 @@
  */
 
 const Bacnet = require('../index');
-const usc = require('underscore');
 const process = require('process');
 
 // Map the Property types to their enums/bitstrings
@@ -75,7 +74,8 @@ ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LIFE_SAFETY
 ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTROL] = {};
 ObjectTypeSpecificPropertyIdentifierToEnumMap[Bacnet.enum.ObjectType.LOAD_CONTROL][Bacnet.enum.PropertyIdentifier.PRESENT_VALUE] = Bacnet.enum.ShedState;
 
-const proSubSet = [
+// For Objects we read out All properties if cli parameter --all is provided
+const propSubSet = (process.argv.includes('--all')) ? Object.values(Bacnet.enum.PropertyIdentifier) : [
   Bacnet.enum.PropertyIdentifier.OBJECT_IDENTIFIER,
   Bacnet.enum.PropertyIdentifier.OBJECT_NAME,
   Bacnet.enum.PropertyIdentifier.DESCRIPTION,
@@ -106,6 +106,7 @@ const proSubSet = [
   Bacnet.enum.PropertyIdentifier.ACTIVE_COV_SUBSCRIPTIONS,
   Bacnet.enum.PropertyIdentifier.ACTIVE_COV_MULTIPLE_SUBSCRIPTIONS
 ];
+const debug = process.argv.includes('--debug');
 
 /**
  * Retrieve all properties manually because ReadPropertyMultiple is not available
@@ -118,7 +119,7 @@ const proSubSet = [
  */
 function getAllPropertiesManually(address, objectId, callback, propList, result) {
   if (!propList) {
-    propList = Object.values(Bacnet.enum.PropertyIdentifier);
+    propList = propSubSet.map((x) => x); // Clone the array
   }
   if (!result) {
     result = [];
@@ -139,7 +140,9 @@ function getAllPropertiesManually(address, objectId, callback, propList, result)
   // Read only object-list property
   bacnetClient.readProperty(address, objectId, prop, (err, value) => {
     if (!err) {
-      console.log('value ' + prop + ': ', JSON.stringify(value));
+      if (debug) {
+        console.log('Handle value ' + prop + ': ', JSON.stringify(value));
+      }
       const objRes = value.property;
       objRes.value = value.values;
       result.push(objRes);
@@ -273,7 +276,7 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
         } else {
           getAllPropertiesManually(address, value.value, result => {
             parseDeviceObject(address, result, value.value, false, callback);
-          }, proSubSet);
+          });
           return;
         }
         break;
@@ -318,7 +321,9 @@ function parseValue(address, objId, parentType, value, supportsMultiple, callbac
  * @param callback
  */
 function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
-  console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
+  if (debug) {
+    console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
+  }
   if (!obj.values || !Array.isArray(obj.values)) {
     console.log('No device or invalid response');
     callback({'ERROR': 'No device or invalid response'});
@@ -340,7 +345,9 @@ function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
     if (obj.values.length === 1) {
       objDef = objDef[obj.values[0].objectId.instance];
     }
-    console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
+    if (debug) {
+      console.log('END parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(objDef));
+    }
     callback(objDef);
   };
 
@@ -364,16 +371,22 @@ function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
       if (devObj.index !== 4294967295) {
         objId += '-' + devObj.index;
       }
-      //console.log(objId, devObj.value);
-      objDef[deviceId][objId] = objDef[deviceId][objId] || [];
+      if (debug) {
+        console.log('Handle Object property:', deviceId, objId, devObj.value);
+      }
       devObj.value.forEach(val => {
         if (JSON.stringify(val.value) === JSON.stringify(parent)) {
           // ignore parent object
+          objDef[deviceId][objId] = objDef[deviceId][objId] || [];
           objDef[deviceId][objId].push(val.value);
           return;
         }
         cbCount++;
         parseValue(address, devObj.id, parent.type, val, supportsMultiple, parsedValue => {
+          if (debug) {
+            console.log('RETURN parsedValue', deviceId, objId, devObj.value, parsedValue);
+          }
+          objDef[deviceId][objId] = objDef[deviceId][objId] || [];
           objDef[deviceId][objId].push(parsedValue);
           if (!--cbCount) {
             finalize();
@@ -466,12 +479,12 @@ bacnetClient.on('iAm', (device) => {
 
   bacnetClient.readPropertyMultiple(address, requestArray, (err, value) => {
     if (err) {
-      console.log(err.message);
+      console.log(deviceId, 'No ReadPropertyMultiple supported:', err.message);
       getAllPropertiesManually(address, {type: 8, instance: deviceId}, result => {
         parseDeviceObject(address, result, {type: 8, instance: deviceId}, false, res => printResultObject(deviceId, res));
       });
     } else {
-      console.log('multiple read done');
+      console.log(deviceId, 'ReadPropertyMultiple supported ...');
       parseDeviceObject(address, value, {type: 8, instance: deviceId}, true, res => printResultObject(deviceId, res));
     }
   });

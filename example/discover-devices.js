@@ -42,18 +42,24 @@ bacnetClient.on('iAm', (device) => {
   const deviceId = device.payload.deviceId;
   if (knownDevices.includes(deviceId)) return;
 
-  bacnetClient.readProperty(address, {type: 8, instance: deviceId}, 77, (err, value) => {
+  bacnetClient.readProperty(address, {type: 8, instance: deviceId}, Bacnet.enum.PropertyIdentifier.OBJECT_NAME, (err, value) => {
     if (err) {
       console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
       console.log(err);
     } else {
-      if (value.values[0].value) {
-        console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address) + ': ' + value.values[0].value);
-      } else {
-        console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
-        console.log('value: ', JSON.stringify(value));
-      }
-      console.log();
+      bacnetClient.readProperty(address, {type: 8, instance: deviceId}, Bacnet.enum.PropertyIdentifier.OBJECT_NAME, (err2, valueVendor) => {
+
+        if (value && value.values && value.values[0].value) {
+          console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address) + ': ' + value.values[0].value);
+        } else {
+          console.log('Found Device ' + deviceId + ' on ' + JSON.stringify(address));
+          console.log('value: ', JSON.stringify(value));
+        }
+        if (!err2 && valueVendor && valueVendor.values && valueVendor.values[0].value) {
+          console.log('Vendor: ' + valueVendor.values[0].value);
+        }
+        console.log();
+      });
     }
   });
   knownDevices.push(deviceId);
