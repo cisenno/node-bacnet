@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.3...v0.2.1) (2020-06-01)
+
+
+### Bug Fixes
+
+* **enum:** reset to standard lib enum names ([587fc4e](https://github.com/BiancoRoyal/node-bacstack/commit/587fc4ea7fce74793124bf0616b31a96f415a90b))
+* **example:** typo enums ([c9c51d7](https://github.com/BiancoRoyal/node-bacstack/commit/c9c51d7949f81c311bffb927cd0a929db8dbc145))
+* **publish:** missing run on coverage step ([ba121df](https://github.com/BiancoRoyal/node-bacstack/commit/ba121dfe3865c0c1385eb1ef9d1fb0de0a40af79))
+
 ## [0.2.0-beta.1](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.3...v0.2.0-beta.1) (2020-06-01)
 
 
