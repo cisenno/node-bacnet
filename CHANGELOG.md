@@ -1,8 +1,10 @@
-# Changelog
+## <small>0.2.3 (2020-06-02)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore(release): 0.2.3 ([a708b16](https://github.com/BiancoRoyal/node-bacstack/commit/a708b16))
+* chore(release): changelog ([e0fe249](https://github.com/BiancoRoyal/node-bacstack/commit/e0fe249))
+* docs: travis docs update on master tags ([7bddd51](https://github.com/BiancoRoyal/node-bacstack/commit/7bddd51))
 
-### [0.2.3](https://github.com/BiancoRoyal/node-bacstack/compare/v0.2.2...v0.2.3) (2020-06-02)
+
 
 ## <small>0.2.2 (2020-06-02)</small>
 
@@ -470,3 +472,6 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+
