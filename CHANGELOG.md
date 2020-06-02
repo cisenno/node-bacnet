@@ -1,3 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.2.2](https://github.com/BiancoRoyal/node-bacstack/compare/v0.2.1...v0.2.2) (2020-06-02)
+
 ## <small>0.2.1 (2020-06-01)</small>
 
 * chore: remove feature test files ([c0bc963](https://github.com/BiancoRoyal/node-bacstack/commit/c0bc963))
@@ -452,6 +458,3 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
-
-
-
