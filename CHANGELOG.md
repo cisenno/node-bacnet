@@ -1,8 +1,14 @@
-# Changelog
+## <small>0.2.2 (2020-06-02)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore: release docs just with master ([979e265](https://github.com/BiancoRoyal/node-bacstack/commit/979e265))
+* chore(release): 0.2.2 ([caec31b](https://github.com/BiancoRoyal/node-bacstack/commit/caec31b))
+* test: read the most supported properties ([12b68f0](https://github.com/BiancoRoyal/node-bacstack/commit/12b68f0))
+* test(coverage): hold coverage data from docker ([cdefbf9](https://github.com/BiancoRoyal/node-bacstack/commit/cdefbf9))
+* test(coverage): new traivs instructions ([586c284](https://github.com/BiancoRoyal/node-bacstack/commit/586c284))
+* fix(examples) fix example scipts ([2dfe509](https://github.com/BiancoRoyal/node-bacstack/commit/2dfe509))
+* docs: only pages on master ([4520417](https://github.com/BiancoRoyal/node-bacstack/commit/4520417))
 
-### [0.2.2](https://github.com/BiancoRoyal/node-bacstack/compare/v0.2.1...v0.2.2) (2020-06-02)
+
 
 ## <small>0.2.1 (2020-06-01)</small>
 
@@ -458,3 +464,6 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+
