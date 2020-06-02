@@ -7,3 +7,5 @@ services:
       context: .
     links:
       - bacnet-device
+    volumes:
+      - ./reports/coverage:/reports/coverage

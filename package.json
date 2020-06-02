@@ -11,7 +11,7 @@
     "test": "npm run lint && npm run test:unit && npm run test:integration",
     "coverage": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm test",
     "coverage:compliance": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm run test:compliance",
-    "coverage:all": "DEBUG=bacnet* nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm run test:all",
+    "coverage:all": "DEBUG=bacnet* nyc --reporter=lcov --reporter=text-summary --report-dir /reports/coverage npm run test:all",
     "test:unit": "DEBUG=bacnet* mocha test/unit/*.spec.js",
     "test:integration": "DEBUG=bacnet* mocha test/integration/*.spec.js --timeout 5000",
     "test:compliance": "DEBUG=bacnet* mocha test/compliance/*.spec.js --timeout 5000",

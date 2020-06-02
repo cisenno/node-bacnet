@@ -1,24 +1,21 @@
-# Changelog
+## <small>0.2.1 (2020-06-01)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore: remove feature test files ([c0bc963](https://github.com/BiancoRoyal/node-bacstack/commit/c0bc963))
+* chore: update CoC ([d8e683e](https://github.com/BiancoRoyal/node-bacstack/commit/d8e683e))
+* chore(release): 0.2.0-beta.1 ([a1164d4](https://github.com/BiancoRoyal/node-bacstack/commit/a1164d4))
+* chore(release): 0.2.1 ([420f648](https://github.com/BiancoRoyal/node-bacstack/commit/420f648))
+* test: read on WAGO 750-830 ([5d27395](https://github.com/BiancoRoyal/node-bacstack/commit/5d27395))
+* test(asn1): refactor and testing with coveralls ([42c9c6b](https://github.com/BiancoRoyal/node-bacstack/commit/42c9c6b))
+* test(docker): fix codacy problems ([570a465](https://github.com/BiancoRoyal/node-bacstack/commit/570a465))
+* test(lint): lint with eslint instead of jscs #24 ([011c3e1](https://github.com/BiancoRoyal/node-bacstack/commit/011c3e1)), closes [#24](https://github.com/BiancoRoyal/node-bacstack/issues/24)
+* test(wago): example ([3a22498](https://github.com/BiancoRoyal/node-bacstack/commit/3a22498))
+* refactor(enum): #25 no plural in enums ([d9aa494](https://github.com/BiancoRoyal/node-bacstack/commit/d9aa494)), closes [#25](https://github.com/BiancoRoyal/node-bacstack/issues/25)
+* refactor(test): with codacy ([91bff58](https://github.com/BiancoRoyal/node-bacstack/commit/91bff58))
+* fix(enum): reset to standard lib enum names ([587fc4e](https://github.com/BiancoRoyal/node-bacstack/commit/587fc4e))
+* fix(example): typo enums ([c9c51d7](https://github.com/BiancoRoyal/node-bacstack/commit/c9c51d7))
+* fix(publish): missing run on coverage step ([ba121df](https://github.com/BiancoRoyal/node-bacstack/commit/ba121df))
 
-### [0.2.1](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.3...v0.2.1) (2020-06-01)
 
-
-### Bug Fixes
-
-* **enum:** reset to standard lib enum names ([587fc4e](https://github.com/BiancoRoyal/node-bacstack/commit/587fc4ea7fce74793124bf0616b31a96f415a90b))
-* **example:** typo enums ([c9c51d7](https://github.com/BiancoRoyal/node-bacstack/commit/c9c51d7949f81c311bffb927cd0a929db8dbc145))
-* **publish:** missing run on coverage step ([ba121df](https://github.com/BiancoRoyal/node-bacstack/commit/ba121dfe3865c0c1385eb1ef9d1fb0de0a40af79))
-
-## [0.2.0-beta.1](https://github.com/BiancoRoyal/node-bacstack/compare/v0.1.2-beta.3...v0.2.0-beta.1) (2020-06-01)
-
-
-### Bug Fixes
-
-* **enum:** reset to standard lib enum names ([587fc4e](https://github.com/BiancoRoyal/node-bacstack/commit/587fc4ea7fce74793124bf0616b31a96f415a90b))
-* **example:** typo enums ([c9c51d7](https://github.com/BiancoRoyal/node-bacstack/commit/c9c51d7949f81c311bffb927cd0a929db8dbc145))
-* **publish:** missing run on coverage step ([ba121df](https://github.com/BiancoRoyal/node-bacstack/commit/ba121dfe3865c0c1385eb1ef9d1fb0de0a40af79))
 
 ## <small>0.1.2-beta.3 (2020-05-31)</small>
 
@@ -455,3 +452,6 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
+
+
+
