@@ -83,6 +83,8 @@ Docker-Compose. To do so, simply run:
 npm run docker
 ```
 
+**uses coverage:all and coverage:all is just to use with docker, please!**
+
 ### Documentation
 
 The API documentation is generated using [JSDoc](http://usejsdoc.org/) and

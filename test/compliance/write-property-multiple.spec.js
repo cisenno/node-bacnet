@@ -6,7 +6,7 @@ const utils = require('./utils');
 // you need to have this run against the official backstack c
 // demo device started as deviceId 1234
 // use "npm run docker" to execute this
-describe('bacnet - write property compliance', () => {
+describe('bacnet - write property multiple compliance', () => {
   let bacnetClient;
   let discoveredAddress;
   let onClose = null;
@@ -62,11 +62,14 @@ describe('bacnet - write property compliance', () => {
     });
   });
 
-  it('write property PRESENT_VALUE from analog-output,2 from device', (next) => {
-    bacnetClient.writeProperty(discoveredAddress, {type: 1, instance: 2}, 85, [
-      {type: utils.bacnetClient.enum.ApplicationTag.REAL, value: 100}
-    ], (err) => {
-      expect(err).to.equal(null);
+  it('write property using Multiple PRESENT_VALUE from analog-output,2 from device', (next) => {
+    const values = [
+      {objectId: {type: 1, instance: 2}, values: [
+          {property: {id: 85}, value: [{type: utils.bacnetClient.enum.ApplicationTag.REAL, value: 100}], priority: 8}
+        ]}
+    ];
+    bacnetClient.writePropertyMultiple(discoveredAddress, values, (err) => {
+      expect(err.message).to.equal('BacnetError Class: DEVICE (0) Code: CONFIGURATION_IN_PROGRESS (2)'); // not supported :-(
       next();
     });
   });
@@ -75,7 +78,7 @@ describe('bacnet - write property compliance', () => {
     bacnetClient.readProperty(discoveredAddress, {type: 1, instance: 2}, 85, (err, value) => {
       expect(err).to.equal(null);
       expect(value).to.be.an('object');
-      expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index': utils.index},'values':[{'type':4,'value':100}]});
+      expect(value).to.deep.equal({'len':14,'objectId':{'type':1,'instance':2},'property':{'id':85,'index': utils.index},'values':[{'type':4,'value':0}]});
       next();
     });
   });

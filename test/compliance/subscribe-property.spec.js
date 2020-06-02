@@ -6,7 +6,7 @@ const utils = require('./utils');
 // you need to have this run against the official backstack c
 // demo device started as deviceId 1234
 // use "npm run docker" to execute this
-describe('bacnet - subscribeProperty compliance', () => {
+describe('bacnet - subscribe property compliance', () => {
   let bacnetClient;
   let discoveredAddress;
   let onClose = null;
@@ -55,7 +55,7 @@ describe('bacnet - subscribeProperty compliance', () => {
 
   it('subscribe property BINARY_VALUE,2 from device, expect not supported error', (next) => {
     bacnetClient.subscribeProperty(discoveredAddress, {type: 5, instance: 2}, {id: 85, index: utils.index}, 1000, false, false, (err) => {
-      expect(err).to.be.ok;
+      expect(err.message).to.equal('BacnetAbort - Reason:9');
       expect(err.bacnetAbortReason).to.equal(utils.bacnetClient.enum.AbortReason.OUT_OF_RESOURCES); // 9
       next();
     });

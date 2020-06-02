@@ -96,7 +96,7 @@ describe('bacnet - Services layer EventNotifyData unit', () => {
       eventType: 2,
       messageText: 'Test1234$',
       notifyType: 1,
-      changeOfValueTag: baEnum.CovTypes.REAL,
+      changeOfValueTag: baEnum.CovType.REAL,
       changeOfValueChangeValue: 90,
       changeOfValueStatusFlags: {bitsUsed: 24, value: [0xaa, 0xaa, 0xaa]}
     });

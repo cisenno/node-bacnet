@@ -12,7 +12,7 @@ describe('bacnet - whoIs integration', () => {
     const client = new utils.bacnetClient({apduTimeout: 200});
     client.on('iAm', (receiver, deviceId, maxApdu, segmentation, vendorId) => {
       client.close();
-      expect(parseInt(receiver.payload.deviceId)).to.be.a('number'); // if there are device you'll get a response here
+      expect(parseInt(receiver.payload.deviceId, 10)).to.be.a('number'); // if there are device you'll get a response here
       clearTimeout(timeOutWithoutDevice);
       next();
     });

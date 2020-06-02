@@ -6,7 +6,7 @@ const utils = require('./utils');
 // you need to have this run against the official backstack c
 // demo device started as deviceId 1234
 // use "npm run docker" to execute this
-describe('bacnet - readPropertyMultiple compliance', () => {
+describe('bacnet - read property multiple compliance', () => {
   let bacnetClient;
   let discoveredAddress;
   let onClose = null;
@@ -60,13 +60,13 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
-      expect(value.values[0].objectId).to.deep.equal({"type":8,"instance": utils.deviceUnderTest +1});
+      expect(value.values[0].objectId).to.deep.equal({'type':8,'instance': utils.deviceUnderTest +1});
       expect(value.values[0].values).to.be.an('array');
-      expect(value.values[0].values[0]).to.deep.equal({"id":75,"index": utils.index,"value":[{"type":105,"value":{"errorClass":1,"errorCode":31}}]});
+      expect(value.values[0].values[0]).to.deep.equal({'id':75,'index': utils.index,'value':[{'type':105,'value':{'errorClass':1,'errorCode':31}}]});
       next();
     });
   });
@@ -78,13 +78,13 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
-      expect(value.values[0].objectId).to.deep.equal({"type":8,"instance": utils.deviceUnderTest});
+      expect(value.values[0].objectId).to.deep.equal({'type':8,'instance': utils.deviceUnderTest});
       expect(value.values[0].values).to.be.an('array');
-      expect(value.values[0].values[0]).to.deep.equal({"id":75,"index": utils.index,"value":[{"value":{"type":8,"instance": utils.deviceUnderTest},"type":12}]});
+      expect(value.values[0].values[0]).to.deep.equal({'id':75,'index': utils.index,'value':[{'value':{'type':8,'instance': utils.deviceUnderTest},'type':12}]});
       next();
     });
   });
@@ -96,13 +96,13 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress.address, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
-      expect(value.values[0].objectId).to.deep.equal({"type":8,"instance": utils.deviceUnderTest});
+      expect(value.values[0].objectId).to.deep.equal({'type':8,'instance': utils.deviceUnderTest});
       expect(value.values[0].values).to.be.an('array');
-      expect(value.values[0].values[0]).to.deep.equal({"id":75,"index": utils.index,"value":[{"value":{"type":8,"instance": utils.deviceUnderTest},"type":12}]});
+      expect(value.values[0].values[0]).to.deep.equal({'id':75,'index': utils.index,'value':[{'value':{'type':8,'instance': utils.deviceUnderTest},'type':12}]});
       next();
     });
   });
@@ -114,14 +114,14 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(discoveredAddress, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
-      expect(value.values[0].objectId).to.deep.equal({"type":1,"instance": 2});
+      expect(value.values[0].objectId).to.deep.equal({'type':1,'instance': 2});
       expect(value.values[0].values).to.be.an('array');
-      expect(value.values[0].values[0]).to.deep.equal({"id":75,"index": utils.index,"value":[{"value":{"type":1,"instance": 2},"type":12}]});
-      expect(value.values[0].values[1]).to.deep.equal({"id":77,"index": utils.index,"value":[{"value":"ANALOG OUTPUT 2","type":7,"encoding":0}]});
+      expect(value.values[0].values[0]).to.deep.equal({'id':75,'index': utils.index,'value':[{'value':{'type':1,'instance': 2},'type':12}]});
+      expect(value.values[0].values[1]).to.deep.equal({'id':77,'index': utils.index,'value':[{'value':'ANALOG OUTPUT 2','type':7,'encoding':0}]});
       next();
     });
   });
@@ -133,13 +133,13 @@ describe('bacnet - readPropertyMultiple compliance', () => {
       properties: [{id: 8}]
     }];
     bacnetClient.readPropertyMultiple(null, requestArray, (err, value) => {
-      expect(err).to.be.not.ok;
+      expect(err).to.equal(null);
       expect(value).to.be.an('object');
       expect(value.values).to.be.an('array');
       expect(value.values[0]).to.be.an('object');
-      expect(value.values[0].objectId).to.deep.equal({"type":8,"instance": utils.deviceUnderTest});
+      expect(value.values[0].objectId).to.deep.equal({'type':8,'instance': utils.deviceUnderTest});
       expect(value.values[0].values).to.be.an('array');
-      expect(value.values[0].values[0]).to.deep.equal({"id":75,"index": utils.index,"value":[{"value":{"type":8,"instance": utils.deviceUnderTest},"type":12}]});
+      expect(value.values[0].values[0]).to.deep.equal({'id':75,'index': utils.index,'value':[{'value':{'type':8,'instance': utils.deviceUnderTest},'type':12}]});
       next();
     });
   });

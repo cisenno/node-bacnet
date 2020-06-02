@@ -5,11 +5,7 @@ jobs:
       node_js: "lts/*"
       sudo: false
       script:
-        - "npm install coveralls"
-        - "npm run lint"
-        - "npm run coverage"
-        - "cat ./reports/coverage/lcov.info | ./node_modules/.bin/coveralls"
-        - "npm run docs"
+        - "npm test"
     - stage: compliance
       node_js: "lts/*"
       services: docker
@@ -20,7 +16,9 @@ jobs:
         - chmod +x docker-compose
         - sudo mv docker-compose /usr/local/bin
       script:
+        - "npm install coveralls"
         - "npm run docker"
+        - "cat ./reports/coverage/lcov.info | ./node_modules/.bin/coveralls"
     - stage: pages
       branches:
         only:
@@ -32,11 +30,12 @@ jobs:
         - "npm run docs"
       deploy:
         provider: pages
+        on:
+          branch: master
         local_dir: ./docs
         github_token: $GITHUB_API_KEY
         skip_cleanup: true
-        on:
-          tags: true
+
 cache:
   directories:
     - "node_modules"
@@ -46,3 +45,4 @@ branches:
     - develop
     - alpha
     - beta
+    - next

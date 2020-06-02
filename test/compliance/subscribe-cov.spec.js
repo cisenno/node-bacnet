@@ -6,7 +6,7 @@ const utils = require('./utils');
 // you need to have this run against the official backstack c
 // demo device started as deviceId 1234
 // use "npm run docker" to execute this
-describe('bacnet - subscribeCov compliance', () => {
+describe('bacnet - subscribe cov compliance', () => {
   let bacnetClient;
   let discoveredAddress;
   let onClose = null;
@@ -55,7 +55,7 @@ describe('bacnet - subscribeCov compliance', () => {
 
   it('subscribeCov property BINARY_VALUE,2 from device, expect error OPTIONAL_FUNCTIONALITY_NOT_SUPPORTED', (next) => {
     bacnetClient.subscribeCov(discoveredAddress, {type: 5, instance: 2}, 107, false, false, 0, (err) => {
-      expect(err).to.be.ok;
+      expect(err.message).to.equal('BacnetError Class: OBJECT (1) Code: OPTIONAL_FUNCTIONALITY_NOT_SUPPORTED (45)');
       expect(err.bacnetErrorClass).to.equal(utils.bacnetClient.enum.ErrorClass.OBJECT); // 1
       expect(err.bacnetErrorCode).to.equal(utils.bacnetClient.enum.ErrorCode.OPTIONAL_FUNCTIONALITY_NOT_SUPPORTED); // 45
       next();
