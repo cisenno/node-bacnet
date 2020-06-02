@@ -334,11 +334,18 @@ function parseDeviceObject(address, obj, parent, supportsMultiple, callback) {
   if (debug) {
     console.log('START parseDeviceObject: ' + JSON.stringify(parent) + ' : ' + JSON.stringify(obj));
   }
+
+  if(!obj) {
+    console.log('object not valid on parse device object');
+    return;
+  }
+
   if (!obj.values || !Array.isArray(obj.values)) {
     console.log('No device or invalid response');
     callback({'ERROR': 'No device or invalid response'});
     return;
   }
+
   let cbCount = 0;
   let objDef = {};
 
@@ -478,7 +485,7 @@ bacnetClient.on('iAm', (device) => {
   knownDevices.push(deviceId);
 
   const propertyList = [];
-  proSubSet.forEach(item => {
+  propSubSet.forEach(item => {
     propertyList.push({id: item});
   });
 
