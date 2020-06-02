@@ -1,7 +1,16 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.2.4](https://github.com/BiancoRoyal/node-bacstack/compare/v0.2.2...v0.2.4) (2020-06-02)
+
 ## <small>0.2.3 (2020-06-02)</small>
 
+* chore: changelog ([fb4618a](https://github.com/BiancoRoyal/node-bacstack/commit/fb4618a))
+* chore(deploy): missing files and pre-publish ([f0457c6](https://github.com/BiancoRoyal/node-bacstack/commit/f0457c6))
 * chore(release): 0.2.3 ([a708b16](https://github.com/BiancoRoyal/node-bacstack/commit/a708b16))
 * chore(release): changelog ([e0fe249](https://github.com/BiancoRoyal/node-bacstack/commit/e0fe249))
+* test: example wago test updates ([6bb53a3](https://github.com/BiancoRoyal/node-bacstack/commit/6bb53a3))
 * docs: travis docs update on master tags ([7bddd51](https://github.com/BiancoRoyal/node-bacstack/commit/7bddd51))
 
 
@@ -164,8 +173,8 @@
 * chore: update libs ([54071e0](https://github.com/BiancoRoyal/node-bacstack/commit/54071e0))
 * chore(github): add GitHub PR and issue templates ([7879d94](https://github.com/BiancoRoyal/node-bacstack/commit/7879d94))
 * chore(license): align copyright claim with readme ([b3ec4a3](https://github.com/BiancoRoyal/node-bacstack/commit/b3ec4a3))
-* chore(npm): bump all dependencies to latest version ([5983acf](https://github.com/BiancoRoyal/node-bacstack/commit/5983acf))
 * chore(npm): bump all dependencies to latest version ([3931831](https://github.com/BiancoRoyal/node-bacstack/commit/3931831))
+* chore(npm): bump all dependencies to latest version ([5983acf](https://github.com/BiancoRoyal/node-bacstack/commit/5983acf))
 * chore(npm): bump all NPM dependencies to latest version ([9b5cfaf](https://github.com/BiancoRoyal/node-bacstack/commit/9b5cfaf))
 * chore(nyc): switch from istanbul to nyc for coverage reporting ([d4af9ad](https://github.com/BiancoRoyal/node-bacstack/commit/d4af9ad)), closes [#129](https://github.com/BiancoRoyal/node-bacstack/issues/129)
 * chore(tarvis): split-up build and deployment stages ([10ac688](https://github.com/BiancoRoyal/node-bacstack/commit/10ac688))
@@ -472,6 +481,3 @@ specification.
 * docs(readme): add Travis-CI and David-DM badges ([9baf051](https://github.com/BiancoRoyal/node-bacstack/commit/9baf051))
 * feat: create initial implementation ([1c4f139](https://github.com/BiancoRoyal/node-bacstack/commit/1c4f139))
 * feat: create initial project structure ([4b2c8c0](https://github.com/BiancoRoyal/node-bacstack/commit/4b2c8c0))
-
-
-

@@ -1,13 +1,13 @@
 {
   "name": "node-bacnet",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "The BACnet protocol library written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
     "changelog": "conventional-changelog -p conventail -i CHANGELOG.md -s -r 0",
-    "lint": "jshint lib/ test/ index.js && eslint lib/** test/** example/** index.js",
-    "lint:fix": "eslint --fix lib/** test/** example/** index.js",
-    "lint:fix:dry": "eslint --fix-dry-run lib/** test/** example/** index.js",
+    "lint": "jshint lib/ test/ index.js && eslint lib/** test/** examples/** index.js",
+    "lint:fix": "eslint --fix lib/** test/** examples/** index.js",
+    "lint:fix:dry": "eslint --fix-dry-run lib/** test/** examples/** index.js",
     "test": "npm run lint && npm run test:unit && npm run test:integration",
     "coverage": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm test",
     "coverage:compliance": "nyc --reporter=lcov --reporter=text-summary --report-dir reports/coverage npm run test:compliance",
