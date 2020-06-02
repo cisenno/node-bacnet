@@ -23,7 +23,7 @@
     "compose:build": "docker-compose build",
     "compose:up": "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client",
     "docker": "npm run compose:build && npm run compose:up",
-    "prepublishOnly": "npm run lint && npm run coverage && npm run docker"
+    "prepublishOnly": "npm run lint && npm run coverage && npm run docker && npm run docs"
   },
   "repository": {
     "type": "git",
